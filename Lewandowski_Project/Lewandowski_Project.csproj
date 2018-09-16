@@ -191,12 +191,12 @@
     <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\PractitionerProfile.aspx" />
+    <Content Include="PractitionerProfile.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
-    <Content Include="Account\StudentProfile.aspx" />
+    <Content Include="StudentProfile.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -322,11 +322,11 @@
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Account\PractitionerProfile.aspx.cs">
+    <Compile Include="PractitionerProfile.aspx.cs">
       <DependentUpon>PractitionerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\PractitionerProfile.aspx.designer.cs">
+    <Compile Include="PractitionerProfile.aspx.designer.cs">
       <DependentUpon>PractitionerProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
@@ -357,11 +357,11 @@
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\StudentProfile.aspx.cs">
+    <Compile Include="StudentProfile.aspx.cs">
       <DependentUpon>StudentProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\StudentProfile.aspx.designer.cs">
+    <Compile Include="StudentProfile.aspx.designer.cs">
       <DependentUpon>StudentProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
