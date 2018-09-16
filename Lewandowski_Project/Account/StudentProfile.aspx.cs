@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Lewandowski_Project
+namespace Lewandowski_Project.Account
 {
-    public partial class About : Page
+    public partial class StudentProfile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

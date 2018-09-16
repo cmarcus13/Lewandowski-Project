@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lewandowski_Project
+namespace Lewandowski_Project.Account
 {
 
 
-    public partial class Contact
+    public partial class PractitionerProfile
     {
     }
 }
