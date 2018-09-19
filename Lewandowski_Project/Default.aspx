@@ -3,8 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Med School Tool</h1>
-        <p class="lead">MedSchool Tool is for pre-health students.</p>
+        <h1>MedSchool Tool</h1>
+        <p class="lead">MedSchool Tool is for Pre-Health Students.</p>
     </div>
 
     <div class="row">
