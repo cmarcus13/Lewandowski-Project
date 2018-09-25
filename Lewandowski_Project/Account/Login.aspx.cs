@@ -25,6 +25,19 @@ namespace Lewandowski_Project.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
+            if(Email.Text == "student@gmail.com")
+            {
+                this.Master.FindControl("studentPage").Visible = true;
+            }
+            if (Email.Text == "practitioner@gmail.com")
+            {
+                this.Master.FindControl("practitionerPage").Visible = true;
+            }
+            if (Email.Text == "admin@gmail.com")
+            {
+                this.Master.FindControl("adminPage").Visible = true;
+            }
+
             if (IsValid)
             {
                 // Validate the user password

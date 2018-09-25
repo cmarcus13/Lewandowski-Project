@@ -18,6 +18,10 @@ namespace Lewandowski_Project
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            studentPage.Visible = false;
+            practitionerPage.Visible = false;
+            adminPage.Visible = false;
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
