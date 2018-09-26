@@ -2,8 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
      <div class="jumbotron">
-        <h1>Med School Tool</h1>
-        <p class="lead">Practioner Profile</p>
+        <h1>Practitioner Profile</h1>
     </div>
     
     <input id="profilePicture" type="file" />
@@ -12,6 +11,9 @@
         <div class="col-md-4">
             <p>Full Name: <br />
                 <input id="FullName" type="text" />
+            </p>
+            <p> Phone Number: <br />
+                <input id="PhoneNumber" type="text" />
             </p>
             <p>Graduation Year: <br />
                  <asp:DropDownList ID="DropDownList1" runat="server">
@@ -30,10 +32,13 @@
             <p>Email: <br />
                 <input id="Email" type="text" />
             </p>
+            <p>Medical School: <br />
+                <input id="Text1" type="text" />
+            </p>
         </div>
     </div>
     <textarea id="BioTextArea" cols="40" rows="5">Add Bio</textarea>
     <br /><br />
 
-    <input id="SubmitProfile" type="submit" value="submit" />
+    <input id="UpdateProfileButton" type="submit" value="update" />
 </asp:Content>
