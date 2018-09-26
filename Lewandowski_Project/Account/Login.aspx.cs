@@ -38,7 +38,7 @@ namespace Lewandowski_Project.Account
                 this.Master.FindControl("adminPage").Visible = true;
             }
 
-            if (IsValid)
+            /* if (IsValid)
             {
                 // Validate the user password
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -68,7 +68,7 @@ namespace Lewandowski_Project.Account
                         ErrorMessage.Visible = true;
                         break;
                 }
-            }
+            }*/
         }
     }
 }

@@ -11,7 +11,24 @@ namespace Lewandowski_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<Users> users = new List<Users>();
 
+            users.Add(new Users("John Doe, jDoe@gmail.com, 216-397-1886"));
+            users.Add(new Users("Jane Smith, jSmith@gmail.com, 216-397-1886"));
+
+            usersListView.DataSource = users;
+
+            usersListView.DataBind();
+
+        }
+
+        public class Users
+        {
+            public String UserName { get; set; }
+            public Users(string name)        
+            {
+                UserName = name;
+            }
         }
     }
 }
