@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="Student Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentProfile.aspx.cs" Inherits="Lewandowski_Project.Account.StudentProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Image ID="UIimage" runat="server" ImageUrl="~/Images/StudentProfileViewScreenshot.png" />
+     <br />
+     <br />
+     <br />
     <asp:Image ID="Image1" runat="server" />
     <br />
     <asp:Button ID="UpdateImageButton" runat="server" Text="UpdateImage" />
