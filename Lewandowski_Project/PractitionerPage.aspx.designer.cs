@@ -13,12 +13,30 @@ namespace Lewandowski_Project.Account {
     public partial class PractitionerProfile {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// UndergradDegreeEarnedDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList UndergradDegreeEarnedDropDownList;
+        
+        /// <summary>
+        /// GradSchoolDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList GradSchoolDropDownList;
+        
+        /// <summary>
+        /// MedSchoolDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MedSchoolDropDownList;
     }
 }

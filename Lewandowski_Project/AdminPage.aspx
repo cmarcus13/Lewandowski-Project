@@ -8,17 +8,18 @@
         </ItemTemplate>
     </asp:ListView>
     <br />
-    <asp:Label ID="Label1" runat="server" Text="User:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;
-    <asp:Label ID="Label2" runat="server" Text="Name:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-&nbsp;
-    <asp:Label ID="Label3" runat="server" Text="Email:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-&nbsp;
-    <asp:Label ID="Label4" runat="server" Text="Phone:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+    <asp:Label ID="UserLabel" runat="server" Text="User:"></asp:Label>
+&nbsp;<asp:TextBox ID="UserTextBox" runat="server"></asp:TextBox><br /><br />
+
+    <asp:Label ID="NameLabel" runat="server" Text="Name:"></asp:Label>
+&nbsp;<asp:TextBox ID="NameTextBox" runat="server"></asp:TextBox><br /><br />
+
+    <asp:Label ID="EmailLabel" runat="server" Text="Email:"></asp:Label>
+&nbsp;<asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox><br /><br />
+
+    <asp:Label ID="PhoneLabel" runat="server" Text="Phone:"></asp:Label>
+&nbsp;<asp:TextBox ID="PhoneTextBox" runat="server"></asp:TextBox><br /><br />
+
     <br />
     <br />
     <asp:Button ID="Button1" runat="server" Text="Add" />
