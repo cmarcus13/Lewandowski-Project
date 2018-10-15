@@ -13,30 +13,102 @@ namespace Lewandowski_Project.Account {
     public partial class PractitionerProfile {
         
         /// <summary>
-        /// UndergradDegreeEarnedDropDownList control.
+        /// StateDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList UndergradDegreeEarnedDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList StateDropDownList;
         
         /// <summary>
-        /// GradSchoolDropDownList control.
+        /// DegreeEarnedDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList GradSchoolDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList DegreeEarnedDropDownList;
         
         /// <summary>
-        /// MedSchoolDropDownList control.
+        /// InternshipsDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList MedSchoolDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList InternshipsDropDownList;
+        
+        /// <summary>
+        /// InternshipsAreaDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList InternshipsAreaDropDownList;
+        
+        /// <summary>
+        /// InstituteStateDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList InstituteStateDropDownList;
+        
+        /// <summary>
+        /// InternshipRadioButtonYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton InternshipRadioButtonYes;
+        
+        /// <summary>
+        /// InternshipRadioButtonNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton InternshipRadioButtonNo;
+        
+        /// <summary>
+        /// ProfessionDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ProfessionDropDownList;
+        
+        /// <summary>
+        /// ProfessionStateDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ProfessionStateDropDownList;
+        
+        /// <summary>
+        /// ProfessionRadioButtonYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ProfessionRadioButtonYes;
+        
+        /// <summary>
+        /// ProfessionRadioButtonNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ProfessionRadioButtonNo;
     }
 }
