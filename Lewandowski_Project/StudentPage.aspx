@@ -1,8 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentPage.aspx.cs" Inherits="Lewandowski_Project.Account.StudentProfile" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1>Student Profile</h1>
     </div>
+
+    <asp:Button ID="ClientButton" runat="server" Text="Launch Modal Popup (Client)" />
+
+    <asp:Panel ID="ModalPanel" runat="server" Width="500px">
+        this is so cool if it is working
+        <br />
+        <asp:Button ID="OKButton" runat="server" Text="Close" />
+    </asp:Panel>
+
+    <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="ClientButton"
+        PopupControlID="ModalPanel" OkControlID="OkButton" />
 
     <div style="background-color:#EEEEEE; padding-bottom:10px">
         <div class="row" style="margin:10px">
