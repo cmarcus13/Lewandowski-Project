@@ -323,3 +323,8 @@ C:\Users\Landi\OneDrive\Documents\Files\Lewandowski_Project\Lewandowski_Project\
 C:\Users\Landi\OneDrive\Documents\Files\Lewandowski_Project\Lewandowski_Project\Lewandowski_Project\bin\MySql.Data.dll
 C:\Users\Landi\OneDrive\Documents\Files\Lewandowski_Project\Lewandowski_Project\Lewandowski_Project\bin\Google.Protobuf.xml
 C:\Users\Landi\OneDrive\Documents\Files\Lewandowski_Project\Lewandowski_Project\Lewandowski_Project\bin\MySql.Data.xml
+C:\Users\Tony\cs470\Lewandowski-Project\Lewandowski_Project\bin\AjaxControlToolkit.dll
+C:\Users\Tony\cs470\Lewandowski-Project\Lewandowski_Project\bin\Google.Protobuf.dll
+C:\Users\Tony\cs470\Lewandowski-Project\Lewandowski_Project\bin\MySql.Data.dll
+C:\Users\Tony\cs470\Lewandowski-Project\Lewandowski_Project\bin\Google.Protobuf.xml
+C:\Users\Tony\cs470\Lewandowski-Project\Lewandowski_Project\bin\MySql.Data.xml

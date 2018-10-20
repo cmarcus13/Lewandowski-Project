@@ -49,6 +49,15 @@ namespace Lewandowski_Project.Account {
         protected global::AjaxControlToolkit.ModalPopupExtender mpe;
         
         /// <summary>
+        /// FullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FullName;
+        
+        /// <summary>
         /// SchoolYear control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,33 @@ namespace Lewandowski_Project.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList SchoolYear;
+        
+        /// <summary>
+        /// Majors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Majors;
+        
+        /// <summary>
+        /// Minors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Minors;
+        
+        /// <summary>
+        /// BioResearchInterestTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BioResearchInterestTextBox;
         
         /// <summary>
         /// searchTextBox control.

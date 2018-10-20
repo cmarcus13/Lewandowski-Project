@@ -53,7 +53,6 @@ namespace Lewandowski_Project.Account
 
 
                     Email.Text =  cmd.ExecuteNonQuery().ToString();
-
                    
                 }
             }

@@ -25,8 +25,9 @@
             <p>JCU Email: default@jcu.edu</p>
             <div style="display:flex">
             <section style="flex:1; padding:0, 5px, 5px, 5px">
-                <p>Name: <br />
-                <input type="text" />
+                <p>Name: 
+                    <asp:TextBox ID="FullName" runat="server"></asp:TextBox>
+                    <br />
                 </p> 
                  <p>Year: <br />
                  <asp:DropDownList ID="SchoolYear" runat="server">
@@ -39,15 +40,13 @@
             </p>
             </section>
             <section style="flex:1; padding:0, 5px, 5px, 5px">
-            <p>Major(s): <br />
-                <input type="text" />
+            <p>Major(s): <asp:TextBox ID="Majors" runat="server"></asp:TextBox>
             </p>
-             <p>Minor(s): <br />
-                <input type="text" />
+             <p>Minor(s): <asp:TextBox ID="Minors" runat="server"></asp:TextBox>
             </p>
             </section>
             <section style="flex:1; padding:0, 5px, 5px, 5px">
-            <textarea id="BioTextArea" placeholder="Add Bio" cols="55" rows="5"></textarea>
+            <asp:TextBox id="BioResearchInterestTextBox" TextMode="multiline" Columns="50" Rows="5" runat="server" />
             </section>
            </div>
         </div>
