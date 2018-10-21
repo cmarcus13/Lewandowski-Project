@@ -1,68 +1,69 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentPage.aspx.cs" Inherits="LewandowskiProject.StudentPage" %>
-<%-- <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %> --%>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <style type="text/css">
+        .Background{
+            background-color:black;
+            filter:alpha(opacity=90);
+            opacity:0.8;
+        }
+        .ProfilePopup{
+            background-color: #FFFFFF;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 10px;
+            padding-left:10px;
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+    
+    <%--Header--%>
     <div class="jumbotron">
         <h1>Student Profile</h1>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
     </div>
 
-    <%-- <asp:Button ID="ClientButton" runat="server" Text="Launch Modal Popup (Client)" />
+    <%--Edit student profile modal--%>
+     <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="ClientButton"
+        PopupControlID="ModalPanel" OkControlID="OkButton" BackgroundCssClass="Background" />
+    <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" />
+    <asp:Panel ID="ModalPanel" runat="server" Width="500px" CssClass="ProfilePopup">
+        <h3>Edit Profile</h3>
+       
+        <asp:Label ID="EmailLabel" runat="server" Text="JCU Email:"></asp:Label>
+        &nbsp;<asp:Label ID="Email" runat="server" Text="default@jcu.edu"></asp:Label><br /><br />
+        
+        <asp:Label ID="FNameLabel" runat="server" Text="First Name:"></asp:Label>
+        &nbsp;<asp:TextBox ID="FNameTextBox" runat="server"></asp:TextBox><br /><br />
+        
+        <asp:Label ID="LNameLabel" runat="server" Text="Last Name:"></asp:Label>
+        &nbsp;<asp:TextBox ID="LNameTextBox" runat="server"></asp:TextBox><br /><br />
 
-    <asp:Panel ID="ModalPanel" runat="server" Width="500px">
-        this is so cool if it is working
-        <br />
-        <asp:Button ID="OKButton" runat="server" Text="Close" />
+        <asp:Label ID="YearLabel" runat="server" Text="Year:"></asp:Label>
+        &nbsp;<asp:DropDownList ID="YearDropDownList" runat="server">
+            <asp:ListItem>Select Year</asp:ListItem>
+            <asp:ListItem>Freshman</asp:ListItem>
+            <asp:ListItem>Sophomore</asp:ListItem>
+            <asp:ListItem>Junior</asp:ListItem>
+            <asp:ListItem>Senior</asp:ListItem>
+        </asp:DropDownList><br /><br />
+        
+        <asp:Label ID="MajorLabel" runat="server" Text="Major(s):"></asp:Label>
+        &nbsp;<asp:TextBox ID="MajorTextBox" runat="server"></asp:TextBox><br /><br />
+
+        <asp:Label ID="MinorLabel" runat="server" Text="Minor(s):"></asp:Label>
+        &nbsp;<asp:TextBox ID="MinorTextBox" runat="server"></asp:TextBox><br /><br />
+
+        <textarea id="BioTextArea" placeholder="Add Bio" cols="55" rows="5"></textarea>
+        <br /><br />
+        <asp:Button ID="CloseButton" runat="server" Text="Close" />
     </asp:Panel>
-
-    <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="ClientButton"
-        PopupControlID="ModalPanel" OkControlID="OkButton" /> --%>
-
-    <div style="background-color:#EEEEEE; padding-bottom:10px">
-        <div class="row" style="margin:10px">
-        <div class="col-md-4">
-            <h2>Edit Profile</h2>
-            <p>JCU Email: default@jcu.edu</p>
-            <div style="display:flex">
-            <section style="flex:1; padding:0, 5px, 5px, 5px">
-                <p>First Name: 
-                    <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
-                    <br />
-                </p> 
-                <p>Last Name: 
-                    <asp:TextBox ID="LastName" runat="server"></asp:TextBox>
-                    <br />
-                </p> 
-                 <p>Year: <br />
-                 <asp:DropDownList ID="SchoolYear" runat="server">
-                        <asp:ListItem>Select Year</asp:ListItem>
-                        <asp:ListItem>Freshman</asp:ListItem>
-                        <asp:ListItem>Sophomore</asp:ListItem>
-                        <asp:ListItem>Junior</asp:ListItem>
-                        <asp:ListItem>Senior</asp:ListItem>
-                </asp:DropDownList>
-            </p>
-            </section>
-            <section style="flex:1; padding:0, 5px, 5px, 5px">
-            <p>Major(s): <asp:TextBox ID="Majors" runat="server"></asp:TextBox>
-            </p>
-             <p>Minor(s): <asp:TextBox ID="Minors" runat="server"></asp:TextBox>
-            </p>
-            </section>
-            <section style="flex:1; padding:0, 5px, 5px, 5px">
-            <asp:TextBox id="BioResearchInterestTextBox" TextMode="multiline" Columns="50" Rows="5" runat="server" />
-            </section>
-           </div>
-        </div>
-    </div>
-    <br />
-    <input id="UpdateProfileButton" type="submit" value="Update" />
-    </div>
-
-<br />
 <br />
 
+    <%--view alumni table--%>
     <div style="padding:10px">
         <h2>Explore Alumni</h2>
         <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="200px" runat="server"></asp:TextBox>
@@ -149,7 +150,7 @@
                 <asp:TableCell>2014</asp:TableCell>
                 <asp:TableCell>Columbus</asp:TableCell>
                 <asp:TableCell>OH</asp:TableCell>
-                <asp:TableCell>Pharmacist</asp:TableCell>
+                <asp:TableCell>Pediatrician</asp:TableCell>
                 <asp:TableCell Font-Underline="True" ForeColor="#0000FF">View Full Profile</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -166,6 +167,3 @@
     </div>
     <br />
 </asp:Content>
-
-
-

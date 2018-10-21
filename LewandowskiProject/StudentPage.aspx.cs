@@ -58,17 +58,8 @@ namespace LewandowskiProject
                     cmd.Parameters["Minor"].Direction = ParameterDirection.Output;
 
                     cmd.ExecuteNonQuery();
-
-                    FirstName.Text = cmd.Parameters["FirstName"].Value.ToString();                    
-
                 }
             }
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            personID = 1;
-            fillStudentInfo();
         }
     }
 }
