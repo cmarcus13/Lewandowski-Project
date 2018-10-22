@@ -23,7 +23,7 @@ namespace LewandowskiProject
             personID = 1;
         }
 
-        private void fillStudentInfo()
+        private void get_studentInfo()
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -58,8 +58,35 @@ namespace LewandowskiProject
                     cmd.Parameters["Minor"].Direction = ParameterDirection.Output;
 
                     cmd.ExecuteNonQuery();
+
                 }
             }
         }
+
+        private void update_studentInfo()
+        {
+
+        }
+
+        private void get_practitionerInfo()
+        {
+
+        }
+
+        private void get_practitionersProfessonalHealthExperiences()
+        {
+
+        }
+
+        private void get_practitionersEducations()
+        {
+
+        }
+
+        private void get_practitionersProfessions()
+        {
+
+        }
+
     }
 }
