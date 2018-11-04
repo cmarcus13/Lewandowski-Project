@@ -128,40 +128,6 @@
         <br />
         <div style="padding:5px; flex:3">
 
-        <asp:Table ID="alumniTable" runat="server" Width="90%" CellPadding="5">
-            <asp:TableHeaderRow runat="server" Font-Bold="true" BackColor="#BBBBBB">
-                <asp:TableHeaderCell>Name</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Graduation</asp:TableHeaderCell>
-                <asp:TableHeaderCell>City</asp:TableHeaderCell>
-                <asp:TableHeaderCell>State</asp:TableHeaderCell>
-                <asp:TableHeaderCell>Profession</asp:TableHeaderCell>
-                <asp:TableHeaderCell>View</asp:TableHeaderCell>
-            </asp:TableHeaderRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell>John Doe</asp:TableCell>
-                <asp:TableCell>2001</asp:TableCell>
-                <asp:TableCell>Cleveland</asp:TableCell>
-                <asp:TableCell>OH</asp:TableCell>
-                <asp:TableCell>Dentist</asp:TableCell>
-                <asp:TableCell Font-Underline="True" ForeColor="#0000FF">View Full Profile</asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell>Mary Smith</asp:TableCell>
-                <asp:TableCell>2014</asp:TableCell>
-                <asp:TableCell>Columbus</asp:TableCell>
-                <asp:TableCell>OH</asp:TableCell>
-                <asp:TableCell>Pediatrician</asp:TableCell>
-                <asp:TableCell Font-Underline="True" ForeColor="#0000FF">View Full Profile</asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell>Tom Miller</asp:TableCell>
-                <asp:TableCell>1994</asp:TableCell>
-                <asp:TableCell>Pittsburgh</asp:TableCell>
-                <asp:TableCell>PA</asp:TableCell>
-                <asp:TableCell>Pharmacist</asp:TableCell>
-                <asp:TableCell Font-Underline="True" ForeColor="#0000FF">View Full Profile</asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
             </div>
         </section>
     </div>

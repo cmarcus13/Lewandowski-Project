@@ -229,22 +229,22 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.DropDownList PractitionerEducationDegreeEarnedDropDownList;
         
         /// <summary>
-        /// PractitionerEducationExpertiseTextLabel control.
+        /// PractitionerEducationMajortLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PractitionerEducationExpertiseTextLabel;
+        protected global::System.Web.UI.WebControls.Label PractitionerEducationMajortLabel;
         
         /// <summary>
-        /// PractitionerEducationExpertiseText control.
+        /// PractitionerEducationMajorText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PractitionerEducationExpertiseText;
+        protected global::System.Web.UI.WebControls.TextBox PractitionerEducationMajorText;
         
         /// <summary>
         /// PractitionerEducationMinorTextLabel control.
