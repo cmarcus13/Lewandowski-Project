@@ -27,9 +27,10 @@
     </div>
 
     <%--Edit student profile modal--%>
-     <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="ClientButton"
-        PopupControlID="ModalPanel" OkControlID="OkButton" BackgroundCssClass="Background" />
-    <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" />
+    <asp:HiddenField ID="AjaxFunctionalityEater" runat="server" />
+     <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="AjaxFunctionalityEater"
+        PopupControlID="ModalPanel" BackgroundCssClass="Background" />
+    <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" OnClick="ClientButton_Click" />
     <asp:Panel ID="ModalPanel" runat="server" Width="500px" CssClass="ProfilePopup">
         <h3>Edit Profile</h3>
        
@@ -59,7 +60,7 @@
 
         <textarea id="BioTextArea" placeholder="Add Bio" cols="55" rows="5"></textarea>
         <br /><br />
-        <asp:Button ID="CloseButton" runat="server" Text="Close" />
+        <asp:Button ID="CloseButton" runat="server" Text="Close" OnClick="CloseButton_Click" />
     </asp:Panel>
 <br />
 

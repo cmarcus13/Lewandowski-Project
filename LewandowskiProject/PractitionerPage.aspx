@@ -297,6 +297,7 @@
                      <asp:ListItem>Colorado</asp:ListItem>
                      <asp:ListItem>Connecticut</asp:ListItem>
                      <asp:ListItem>Delaware</asp:ListItem>
+                     <asp:ListItem>District of Columbia</asp:ListItem>
                      <asp:ListItem>Florida</asp:ListItem>
                      <asp:ListItem>Georgia</asp:ListItem>
                      <asp:ListItem>Hawaii</asp:ListItem>
@@ -327,6 +328,7 @@
                      <asp:ListItem>Oklahoma</asp:ListItem>
                      <asp:ListItem>Oregon</asp:ListItem>
                      <asp:ListItem>Pennsylvania</asp:ListItem>
+                     <asp:ListItem>Puerto Rico</asp:ListItem>
                      <asp:ListItem>Rhode Island</asp:ListItem>
                      <asp:ListItem>South Carolina</asp:ListItem>
                      <asp:ListItem>South Dakota</asp:ListItem>
@@ -335,6 +337,7 @@
                      <asp:ListItem>Utah</asp:ListItem>
                      <asp:ListItem>Vermont</asp:ListItem>
                      <asp:ListItem>Virginia</asp:ListItem>
+                     <asp:ListItem>Virgin Islands</asp:ListItem>
                      <asp:ListItem>Washington</asp:ListItem>
                      <asp:ListItem>West Virginia</asp:ListItem>
                      <asp:ListItem>Wisconsin</asp:ListItem>
@@ -408,6 +411,7 @@
                      <asp:ListItem>Colorado</asp:ListItem>
                      <asp:ListItem>Connecticut</asp:ListItem>
                      <asp:ListItem>Delaware</asp:ListItem>
+                     <asp:ListItem>District of Columbia</asp:ListItem>
                      <asp:ListItem>Florida</asp:ListItem>
                      <asp:ListItem>Georgia</asp:ListItem>
                      <asp:ListItem>Hawaii</asp:ListItem>
@@ -438,6 +442,7 @@
                      <asp:ListItem>Oklahoma</asp:ListItem>
                      <asp:ListItem>Oregon</asp:ListItem>
                      <asp:ListItem>Pennsylvania</asp:ListItem>
+                     <asp:ListItem>Puerto Rico</asp:ListItem>
                      <asp:ListItem>Rhode Island</asp:ListItem>
                      <asp:ListItem>South Carolina</asp:ListItem>
                      <asp:ListItem>South Dakota</asp:ListItem>
@@ -446,6 +451,7 @@
                      <asp:ListItem>Utah</asp:ListItem>
                      <asp:ListItem>Vermont</asp:ListItem>
                      <asp:ListItem>Virginia</asp:ListItem>
+                     <asp:ListItem>Virgin Islands</asp:ListItem>
                      <asp:ListItem>Washington</asp:ListItem>
                      <asp:ListItem>West Virginia</asp:ListItem>
                      <asp:ListItem>Wisconsin</asp:ListItem>
@@ -490,6 +496,5 @@
     </form>
 
     <%--<input id="UpdatePractitionerProfileButton" type="submit" value="update" />--%>
-
 
 </asp:Content>

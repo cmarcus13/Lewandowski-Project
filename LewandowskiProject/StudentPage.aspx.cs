@@ -23,6 +23,17 @@ namespace LewandowskiProject
             personID = 1;
         }
 
+        protected void ClientButton_Click(object sender, EventArgs e)
+        {
+            FNameTextBox.Text = "The Text";
+            mpe.Show();
+        }
+
+        protected void CloseButton_Click(object sender, EventArgs e)
+        {
+            mpe.Hide();
+        }
+
         //Storage Procedure to gather the student information for the edit information modal.
         private void get_studentInfo()
         {
@@ -281,6 +292,5 @@ namespace LewandowskiProject
                 }
             }
         }
-
     }
 }

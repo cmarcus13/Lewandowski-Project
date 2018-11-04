@@ -2,10 +2,9 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
-    <p class="text-danger">
-        <asp:Literal runat="server" ID="ErrorMessage" />
-    </p>
-
+       <p>
+            <asp:Literal runat="server" ID="StatusMessage" />
+       </p>
     <div class="form-horizontal">
         <h4>Create a new account</h4>
         <hr />
