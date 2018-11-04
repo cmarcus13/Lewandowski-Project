@@ -103,13 +103,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.TextBox LNameTextBox;
         
         /// <summary>
-        /// YearLabel control.
+        /// YearInSchoolLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label YearLabel;
+        protected global::System.Web.UI.WebControls.Label YearInSchoolLabel;
         
         /// <summary>
         /// YearDropDownList control.
@@ -119,6 +119,24 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList YearDropDownList;
+        
+        /// <summary>
+        /// graduationLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label graduationLabel;
+        
+        /// <summary>
+        /// GraduationYearTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GraduationYearTextbox;
         
         /// <summary>
         /// MajorLabel control.
@@ -155,6 +173,15 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox MinorTextBox;
+        
+        /// <summary>
+        /// BioTextArea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BioTextArea;
         
         /// <summary>
         /// CloseButton control.

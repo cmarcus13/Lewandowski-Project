@@ -21,7 +21,7 @@
         }
     </style>
     
-    <%--Header--%>
+    <%--view alumni table--%>
     <div class="jumbotron">
         <h1>Student Profile</h1>
     </div>
@@ -43,22 +43,27 @@
         <asp:Label ID="LNameLabel" runat="server" Text="Last Name:"></asp:Label>
         &nbsp;<asp:TextBox ID="LNameTextBox" runat="server"></asp:TextBox><br /><br />
 
-        <asp:Label ID="YearLabel" runat="server" Text="Year:"></asp:Label>
+        <asp:Label ID="YearInSchoolLabel" runat="server" Text="Year In School:"></asp:Label>
         &nbsp;<asp:DropDownList ID="YearDropDownList" runat="server">
             <asp:ListItem>Select Year</asp:ListItem>
             <asp:ListItem>Freshman</asp:ListItem>
             <asp:ListItem>Sophomore</asp:ListItem>
             <asp:ListItem>Junior</asp:ListItem>
             <asp:ListItem>Senior</asp:ListItem>
-        </asp:DropDownList><br /><br />
-        
+        </asp:DropDownList>
+        <br />
+        <br />
+        <asp:Label ID="graduationLabel" runat="server" Text="Graduation Year:"></asp:Label>
+        &nbsp;<asp:TextBox ID="GraduationYearTextbox" runat="server"></asp:TextBox>
+        <br />
+        <br />
         <asp:Label ID="MajorLabel" runat="server" Text="Major(s):"></asp:Label>
         &nbsp;<asp:TextBox ID="MajorTextBox" runat="server"></asp:TextBox><br /><br />
 
         <asp:Label ID="MinorLabel" runat="server" Text="Minor(s):"></asp:Label>
         &nbsp;<asp:TextBox ID="MinorTextBox" runat="server"></asp:TextBox><br /><br />
 
-        <textarea id="BioTextArea" placeholder="Add Bio" cols="55" rows="5"></textarea>
+        <asp:Textbox id="BioTextArea" runat="server" placeholder="Add Bio" cols="55" rows="5"></asp:Textbox>
         <br /><br />
         <asp:Button ID="CloseButton" runat="server" Text="Close" OnClick="CloseButton_Click" />
     </asp:Panel>
@@ -66,8 +71,7 @@
 
     <%--view alumni table--%>
     <div style="padding:10px">
-        <h2>Explore Alumni</h2>
-        <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="200px" runat="server"></asp:TextBox>
+        <h2>Explore Alumni  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="200px" runat="server"></asp:TextBox>
         <asp:Button ID="searchButton" runat="server" Text="Go" />
         <asp:DropDownList ID="sortDropDown" runat="server" style="margin:5px">
             <asp:ListItem>Sort by</asp:ListItem>
