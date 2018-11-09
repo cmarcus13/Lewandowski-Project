@@ -14,53 +14,73 @@ namespace LewandowskiProject
     {
         private string dbConnectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
         private int personID = 1;
-        private string firstNameStudent = "";
-        private string firstNamePractitioner = "";
-        private string lastNameStudent = "";
-        private string lastNamePractitioner = "";
-        private string graduationYearStudent = "";
-        private string graduationYearPractitioner = "";
-        private string bio = "";
-        private string majorStudent = "";
-        private string majorPractitioner = "";
-        private string minorStudent = "";
-        private string minorPractitioner = "";
-        private string gender = "";
-        private string phone1 = "";
-        private string email1 = "";
-        private string professionalHealthExperienceType = "";
-        private string instituteName = "";
-        private string city = "";
-        private string state = "";
-        private string areaOfExpertise = "";
-        private string positionTitle = "";
-        private string yearsInExperience = "";
-        private string description = "";
-        private string currentJob = "";
-        private string degreeEarned = "";
-        private string yearInSchoolStudent = "";
-        private string yearInSchoolPractitioner = "";
-        private string professionTitle = "";
-        private string specialty = "";
-        private string inProfession = "";
-        private string yearsInProfession = "";
+        private string firstNameStudent; 
+        private string firstNamePractitioner;
+        private string lastNameStudent;
+        private string lastNamePractitioner;
+        private string graduationYearStudent;
+        private string graduationYearPractitioner;
+        private string bio;
+        private string majorStudent;
+        private string majorPractitioner;
+        private string minorStudent;
+        private string minorPractitioner;
+        private string gender;
+        private string phone1;
+        private string email1;
+        private string professionalHealthExperienceType;
+        private string instituteName;
+        private string city;
+        private string state;
+        private string areaOfExpertise;
+        private string positionTitle;
+        private string yearsInExperience;
+        private string description;
+        private string currentJob;
+        private string degreeEarned;
+        private string yearInSchoolStudent;
+        private string yearInSchoolPractitioner;
+        private string professionTitle;
+        private string specialty;
+        private string inProfession;
+        private string yearsInProfession;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //Add the code that gets the "logged in" person ID from the state.
             //Temporarly set the person ID to 1 for testing purposes.
-            personID = 1;            
+
+            if (!IsPostBack)
+            {
+                personID = 1;
+                get_studentInfo();
+                update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
+                personID = 3;
+                BindListView();
+            }
+        }
+
+        public void BindListView()
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.PersonId as 'Person ID', people.FirstName as 'First Name', people.LastName as 'Last Name', contacts.Email1 as 'Email', contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' ", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            con.Close();
         }
 
         protected void ClientButton_Click(object sender, EventArgs e)
         {            
-            get_studentInfo();
             mpe.Show();//ajax call to show the modal panel
         }
 
         protected void CloseButton_Click(object sender, EventArgs e)
         {
-            update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
+            //update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
             mpe.Hide();//ajax call to close the panel
         }
 
@@ -215,12 +235,17 @@ namespace LewandowskiProject
 
                     cmd.Parameters.AddWithValue("Phone1", phone1);
                     cmd.Parameters["Phone1"].Direction = ParameterDirection.Output;
-                    
+
                     cmd.Parameters.AddWithValue("Email1", email1);
                     cmd.Parameters["Email1"].Direction = ParameterDirection.Output;
 
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("City", city);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Output;
 
+                    cmd.Parameters.AddWithValue("State", state);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Output;
+
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
@@ -355,6 +380,11 @@ namespace LewandowskiProject
 
                 }
             }
+        }
+
+        protected void PractitionerCloseButton_Click(object sender, EventArgs e)
+        {
+            PractitionerGridView_ModalPopupExtender.Hide();
         }
     }
 }
