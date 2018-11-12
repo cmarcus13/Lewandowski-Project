@@ -13,6 +13,15 @@ namespace LewandowskiProject {
     public partial class StudentPage {
         
         /// <summary>
+        /// AjaxFunctionalityEater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField AjaxFunctionalityEater;
+        
+        /// <summary>
         /// mpe control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.TextBox LNameTextBox;
         
         /// <summary>
-        /// YearLabel control.
+        /// YearInSchoolLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label YearLabel;
+        protected global::System.Web.UI.WebControls.Label YearInSchoolLabel;
         
         /// <summary>
         /// YearDropDownList control.
@@ -110,6 +119,24 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList YearDropDownList;
+        
+        /// <summary>
+        /// graduationLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label graduationLabel;
+        
+        /// <summary>
+        /// GraduationYearTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GraduationYearTextbox;
         
         /// <summary>
         /// MajorLabel control.
@@ -146,6 +173,15 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox MinorTextBox;
+        
+        /// <summary>
+        /// BioTextArea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BioTextArea;
         
         /// <summary>
         /// CloseButton control.
@@ -202,24 +238,6 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.DropDownList graduationYearDropDown;
         
         /// <summary>
-        /// ListView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
         /// cityDropDown control.
         /// </summary>
         /// <remarks>
@@ -245,5 +263,167 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList professionDropDown;
+        
+        /// <summary>
+        /// PractitionerGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView PractitionerGridView;
+        
+        /// <summary>
+        /// PractitionerGridView_ModalPopupExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender PractitionerGridView_ModalPopupExtender;
+        
+        /// <summary>
+        /// PractitionerModalPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PractitionerModalPanel;
+        
+        /// <summary>
+        /// PractitionerFirstNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerFirstNameLabel;
+        
+        /// <summary>
+        /// PractitionerFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PractitionerFirstName;
+        
+        /// <summary>
+        /// PractitionerLastNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerLastNameLabel;
+        
+        /// <summary>
+        /// PractitionerLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PractitionerLastName;
+        
+        /// <summary>
+        /// PractitionerGenderRadioButtonListLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerGenderRadioButtonListLabel;
+        
+        /// <summary>
+        /// PractitionerGenderRadioButtonList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList PractitionerGenderRadioButtonList;
+        
+        /// <summary>
+        /// PractitionerPhoneNumberLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerPhoneNumberLabel;
+        
+        /// <summary>
+        /// PractitionerPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PractitionerPhoneNumber;
+        
+        /// <summary>
+        /// PractitionerEmailLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerEmailLabel;
+        
+        /// <summary>
+        /// PractitionerEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PractitionerEmail;
+        
+        /// <summary>
+        /// PractitionerCityLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerCityLabel;
+        
+        /// <summary>
+        /// PractitionerCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PractitionerCity;
+        
+        /// <summary>
+        /// PractitionerPersonalInformationStateDropDownListLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PractitionerPersonalInformationStateDropDownListLabel;
+        
+        /// <summary>
+        /// PractitionerPersonalInformationStateDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList PractitionerPersonalInformationStateDropDownList;
+        
+        /// <summary>
+        /// PractitionerCloseButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PractitionerCloseButton;
     }
 }

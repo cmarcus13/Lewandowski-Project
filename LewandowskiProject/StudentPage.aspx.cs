@@ -12,15 +12,93 @@ namespace LewandowskiProject
 {
     public partial class StudentPage : System.Web.UI.Page
     {
-
         private string dbConnectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
-        private int personID;
+        private int personID = 2;
+        private string firstNameStudent;
+        private string firstNamePractitioner;
+        private string lastNameStudent;
+        private string lastNamePractitioner;
+        private string graduationYearStudent;
+        private string graduationYearPractitioner;
+        private string bio;
+        private string majorStudent;
+        private string majorPractitioner;
+        private string minorStudent;
+        private string minorPractitioner;
+        private string gender;
+        private string phone1;
+        private string email1;
+        private string professionalHealthExperienceType;
+        private string instituteName;
+        private string city;
+        private string state;
+        private string areaOfExpertise;
+        private string positionTitle;
+        private string yearsInExperience;
+        private string description;
+        private string currentJob;
+        private string degreeEarned;
+        private string yearInSchoolStudent;
+        private string yearInSchoolPractitioner;
+        private string professionTitle;
+        private string specialty;
+        private string inProfession;
+        private string yearsInProfession;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //Add the code that gets the "logged in" person ID from the state.
             //Temporarly set the person ID to 1 for testing purposes.
-            personID = 1;
+
+            if (!IsPostBack)
+            {
+                personID = 2;
+                get_studentInfo();
+                update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
+                personID = 3;
+                BindListView();
+            }
+        }
+
+        public void BindListView()
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name', contacts.Email1 as 'Email', contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' ", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+
+            for (int i = 1; i < PractitionerGridView.Columns.Count; i++)
+            {
+                PractitionerGridView.Rows[i].Cells[i].Height = 100;
+                PractitionerGridView.Rows[i].Cells[i].Width = 1000;
+            }
+
+            PractitionerGridView.DataBind();
+
+            con.Close();
+        }
+
+        protected void ClientButton_Click(object sender, EventArgs e)
+        {
+            mpe.Show();//ajax call to show the modal panel
+        }
+
+        protected void BtnViewPractitionerProfile_Click(object sender, EventArgs e)
+        {
+            PractitionerGridView_ModalPopupExtender.Show();//ajax call to show the modal panel
+        }
+
+        protected void CloseButton_Click(object sender, EventArgs e)
+        {
+            //update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
+            mpe.Hide();//ajax call to close the panel
+        }
+
+        protected void PractitionerCloseButton_Click(object sender, EventArgs e)
+        {
+            PractitionerGridView_ModalPopupExtender.Hide();//ajax call to close the panel
         }
 
         //Storage Procedure to gather the student information for the edit information modal.
@@ -40,23 +118,102 @@ namespace LewandowskiProject
 
                     //an out parameter
 
-                    cmd.Parameters.AddWithValue("FirstName", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("FirstName", firstNameStudent);
                     cmd.Parameters["FirstName"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("LastName", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("LastName", lastNameStudent);
                     cmd.Parameters["LastName"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("BioResearchInterst", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("BioResearchInterst", bio);
                     cmd.Parameters["BioResearchInterst"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("GraduationYear", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("YearInSchool", yearInSchoolStudent);
+                    cmd.Parameters["YearInSchool"].Direction = ParameterDirection.Output;
+
+                    cmd.Parameters.AddWithValue("GraduationYear", graduationYearStudent);
                     cmd.Parameters["GraduationYear"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("Major", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("Major", majorStudent);
                     cmd.Parameters["Major"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("Minor", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("Minor", minorStudent);
                     cmd.Parameters["Minor"].Direction = ParameterDirection.Output;
+
+                    cmd.ExecuteNonQuery();
+
+                    //Assigning the global variables to the stored proc output variables. 
+                    firstNameStudent = cmd.Parameters["FirstName"].Value.ToString();
+                    lastNameStudent = cmd.Parameters["LastName"].Value.ToString();
+                    yearInSchoolStudent = cmd.Parameters["YearInSchool"].Value.ToString();
+                    graduationYearStudent = cmd.Parameters["GraduationYear"].Value.ToString();
+                    bio = cmd.Parameters["BioResearchInterst"].Value.ToString();
+                    majorStudent = cmd.Parameters["Major"].Value.ToString();
+                    minorStudent = cmd.Parameters["Minor"].Value.ToString();
+
+                    //Assigning the global variables to the text field values.
+                    FNameTextBox.Text = firstNameStudent;
+                    LNameTextBox.Text = lastNameStudent;
+
+                    if (yearInSchoolStudent.Equals("freshman") || yearInSchoolStudent.Equals("Freshman") || yearInSchoolStudent.Equals("FRESHMAN") || yearInSchoolStudent.Equals("FR") || yearInSchoolStudent.Equals("Fr"))
+                    {
+                        YearDropDownList.SelectedIndex = 1;
+                    }
+                    else if (yearInSchoolStudent.Equals("sophomore") || yearInSchoolStudent.Equals("Sophomore") || yearInSchoolStudent.Equals("SOPHOMORE") || yearInSchoolStudent.Equals("SO") || yearInSchoolStudent.Equals("So"))
+                    {
+                        YearDropDownList.SelectedIndex = 2;
+                    }
+                    else if (yearInSchoolStudent.Equals("junior") || yearInSchoolStudent.Equals("Junior") || yearInSchoolStudent.Equals("JUNIOR") || yearInSchoolStudent.Equals("JR") || yearInSchoolStudent.Equals("Jr"))
+                    {
+                        YearDropDownList.SelectedIndex = 3;
+                    }
+                    else if (yearInSchoolStudent.Equals("senior") || yearInSchoolStudent.Equals("Senior") || yearInSchoolStudent.Equals("SENIOR") || yearInSchoolStudent.Equals("SR") || yearInSchoolStudent.Equals("Sr"))
+                    {
+                        YearDropDownList.SelectedIndex = 4;
+                    }
+
+                    GraduationYearTextbox.Text = graduationYearStudent;
+                    MajorTextBox.Text = majorStudent;
+                    MinorTextBox.Text = minorStudent;
+                    BioTextArea.Text = bio;
+                }
+            }
+        }
+
+        //Storage Procedure to update the student information in the edit modal.
+        private void update_studentInfo(string firstName, string lastName, string yearInSchool, string graduationYear, string bio, string major, string minor)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_studentInfo", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //an in parameter
+
+                    cmd.Parameters.AddWithValue("personId", personID);
+                    cmd.Parameters["personId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("FirstName", firstName);
+                    cmd.Parameters["FirstName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("LastName", lastName);
+                    cmd.Parameters["LastName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("YearInSchool", yearInSchoolStudent);
+                    cmd.Parameters["YearInSchool"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("GraduationYear", graduationYearStudent);
+                    cmd.Parameters["GraduationYear"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Bio", bio);
+                    cmd.Parameters["Bio"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Major", major);
+                    cmd.Parameters["Major"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Minor", minor);
+                    cmd.Parameters["Minor"].Direction = ParameterDirection.Input;
 
                     cmd.ExecuteNonQuery();
 
@@ -282,5 +439,9 @@ namespace LewandowskiProject
             }
         }
 
+        protected void PractitionerGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
