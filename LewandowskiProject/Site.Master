@@ -55,6 +55,7 @@
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" id="StudentPage" href="~/StudentPage">Student Page</a></li>
                         <li><a runat="server" id="PractitionerPage" href="~/PractitionerPage">Practitioner Page</a></li>
+                        <li><a runat="server" href="NewUserPage">New User Page</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

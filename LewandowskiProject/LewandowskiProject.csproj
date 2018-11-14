@@ -228,6 +228,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="NewUserPage.aspx" />
     <Content Include="PractitionerPage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -412,6 +413,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="NewUserPage.aspx.cs">
+      <DependentUpon>NewUserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewUserPage.aspx.designer.cs">
+      <DependentUpon>NewUserPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PractitionerPage.aspx.cs">
       <DependentUpon>PractitionerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

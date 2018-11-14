@@ -292,6 +292,15 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Button PractitionerEducationDeleteButton;
         
         /// <summary>
+        /// PractitionerEducationClearButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PractitionerEducationClearButton;
+        
+        /// <summary>
         /// PractitionerAddInternshipsDropDownList control.
         /// </summary>
         /// <remarks>
@@ -472,6 +481,15 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Button PractitionerInternshipsDeleteButton;
         
         /// <summary>
+        /// PractitionerInternshipsClearButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PractitionerInternshipsClearButton;
+        
+        /// <summary>
         /// PractitionerAddPrfessionDropDownList control.
         /// </summary>
         /// <remarks>
@@ -650,6 +668,15 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button PractitionerProfessionDeleteButton;
+        
+        /// <summary>
+        /// PractitionerProfessionClearButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PractitionerProfessionClearButton;
         
         /// <summary>
         /// BioTextArea control.

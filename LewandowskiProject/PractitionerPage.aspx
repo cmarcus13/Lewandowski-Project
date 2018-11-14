@@ -144,7 +144,7 @@
                      <asp:ListItem>Wyoming</asp:ListItem>
                  </asp:DropDownList>
             </p>
-            <asp:Button ID="PractitionerPersonalInfoSaveButton" runat="server" Text="save"/>
+            <asp:Button ID="PractitionerPersonalInfoSaveButton" runat="server" Text="save" OnClick="PractitionerPersonalInfoSaveButton_Click"/>
         <%--<input id="PractitionerEducationSchoolNameText" type="text" />--%>
 
         <%--<input id="PractitionerEducationGradYearText" type="text" placeholder="ex: yyyy" />--%>
@@ -188,9 +188,11 @@
                 <asp:TextBox ID="PractitionerEducationMinorText" runat="server"></asp:TextBox>
                 <%-- %><p><b>Add more Education + </b></p>--%>
             </p>
-        <asp:Button ID="PractitionerEducationAddButton" runat="server" Text="add" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerEducationUpdateButton" runat="server" Text="update" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerEducationDeleteButton" runat="server" Text="delete" /> <br />
+        <asp:Button ID="PractitionerEducationAddButton" runat="server" Text="add" OnClick="PractitionerEducationAddButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerEducationUpdateButton" runat="server" Text="update" OnClick="PractitionerEducationUpdateButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerEducationDeleteButton" runat="server" Text="delete" OnClick="PractitionerEducationDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerEducationClearButton" runat="server" Text="clear" OnClick="PractitionerEducationClearButton_Click"/> <br />
+
         <%-- <h2>Experience:</h2>
             <p><b>Residency:</b><br /></p>
             <p>Name:<br />
@@ -256,7 +258,6 @@
             <p>
                 <asp:Label ID="PractitionerInternshipsAreaDropDownListLabel" runat="server">Area of Expertise: <br /></asp:Label>
                 <asp:DropDownList ID="PractitionerInternshipsAreaDropDownList" runat="server">
-                    <asp:ListItem>--Pick one--</asp:ListItem>
                     <asp:ListItem>Dentistry</asp:ListItem>
                     <asp:ListItem>Surgery</asp:ListItem>
                     <asp:ListItem>Other</asp:ListItem>
@@ -284,6 +285,7 @@
                      <asp:ListItem>Colorado</asp:ListItem>
                      <asp:ListItem>Connecticut</asp:ListItem>
                      <asp:ListItem>Delaware</asp:ListItem>
+                     <asp:ListItem>District of Columbia</asp:ListItem>
                      <asp:ListItem>Florida</asp:ListItem>
                      <asp:ListItem>Georgia</asp:ListItem>
                      <asp:ListItem>Hawaii</asp:ListItem>
@@ -314,6 +316,7 @@
                      <asp:ListItem>Oklahoma</asp:ListItem>
                      <asp:ListItem>Oregon</asp:ListItem>
                      <asp:ListItem>Pennsylvania</asp:ListItem>
+                     <asp:ListItem>Puerto Rico</asp:ListItem>
                      <asp:ListItem>Rhode Island</asp:ListItem>
                      <asp:ListItem>South Carolina</asp:ListItem>
                      <asp:ListItem>South Dakota</asp:ListItem>
@@ -322,6 +325,7 @@
                      <asp:ListItem>Utah</asp:ListItem>
                      <asp:ListItem>Vermont</asp:ListItem>
                      <asp:ListItem>Virginia</asp:ListItem>
+                     <asp:ListItem>Virgin Islands</asp:ListItem>
                      <asp:ListItem>Washington</asp:ListItem>
                      <asp:ListItem>West Virginia</asp:ListItem>
                      <asp:ListItem>Wisconsin</asp:ListItem>
@@ -338,15 +342,16 @@
            
             <p>
                 <asp:Label ID="PractitionerInternshipsCurrentRadioButtonListLabel" runat="server">Currently working here?<br /></asp:Label>
-                <asp:RadioButtonList ID="PractitionerInternshipsCurrentRadioButtonList" runat="server">
+                <asp:RadioButtonList ID="PractitionerInternshipsCurrentRadioButtonList" runat="server" Width="49px">
                     <asp:ListItem>Yes</asp:ListItem>
                     <asp:ListItem>No</asp:ListItem>
                 </asp:RadioButtonList>
                 <%--<p><b>Add more experience + </b></p>--%>
             </p>
-        <asp:Button ID="PractitionerInternshipsAddButton" runat="server" Text="add" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerInternshipsUpdateButton" runat="server" Text="update" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerInternshipsDeleteButton" runat="server" Text="delete" /> <br />
+        <asp:Button ID="PractitionerInternshipsAddButton" runat="server" Text="add" OnClick="PractitionerInternshipsAddButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerInternshipsUpdateButton" runat="server" Text="update" OnClick="PractitionerInternshipsUpdateButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerInternshipsDeleteButton" runat="server" Text="delete" OnClick="PractitionerInternshipsDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerInternshipsClearButton" runat="server" Text="clear" OnClick="PractitionerInternshipsClearButton_Click" /> <br />
         <%--<input id="PractitionerProfessionName/Title" type="text" />--%>        <%--<input id="PractitionerProfessionLocationText" type="text" />--%>
     
 
@@ -380,7 +385,6 @@
             </p>
             <p><asp:Label ID="PractitionerProfessionStateDropDownListLabel" runat="server">State: <br /></asp:Label>
                 <asp:DropDownList ID="PractitionerProfessionStateDropDownList" runat="server">
-                     <asp:ListItem>--Pick a state--</asp:ListItem>
                      <asp:ListItem>Alabama</asp:ListItem>
                      <asp:ListItem>Alaska</asp:ListItem>
                      <asp:ListItem>Arizona</asp:ListItem>
@@ -389,6 +393,7 @@
                      <asp:ListItem>Colorado</asp:ListItem>
                      <asp:ListItem>Connecticut</asp:ListItem>
                      <asp:ListItem>Delaware</asp:ListItem>
+                     <asp:ListItem>District of Columbia</asp:ListItem>
                      <asp:ListItem>Florida</asp:ListItem>
                      <asp:ListItem>Georgia</asp:ListItem>
                      <asp:ListItem>Hawaii</asp:ListItem>
@@ -419,6 +424,7 @@
                      <asp:ListItem>Oklahoma</asp:ListItem>
                      <asp:ListItem>Oregon</asp:ListItem>
                      <asp:ListItem>Pennsylvania</asp:ListItem>
+                     <asp:ListItem>Puerto Rico</asp:ListItem>
                      <asp:ListItem>Rhode Island</asp:ListItem>
                      <asp:ListItem>South Carolina</asp:ListItem>
                      <asp:ListItem>South Dakota</asp:ListItem>
@@ -427,6 +433,7 @@
                      <asp:ListItem>Utah</asp:ListItem>
                      <asp:ListItem>Vermont</asp:ListItem>
                      <asp:ListItem>Virginia</asp:ListItem>
+                     <asp:ListItem>Virgin Islands</asp:ListItem>
                      <asp:ListItem>Washington</asp:ListItem>
                      <asp:ListItem>West Virginia</asp:ListItem>
                      <asp:ListItem>Wisconsin</asp:ListItem>
@@ -452,9 +459,11 @@
                 <asp:Label ID="PractitionerYearsInLabel" runat="server">Years In Profession:<br /></asp:Label>
                 <asp:TextBox ID="PractitionerYearsInLabelText" runat="server"></asp:TextBox>        
             </p>
-        <asp:Button ID="PractitionerProfessionAddButton" runat="server" Text="add" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerProfessionUpdateButton" runat="server" Text="update" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerProfessionDeleteButton" runat="server" Text="delete" /> <br />
+        <asp:Button ID="PractitionerProfessionAddButton" runat="server" Text="add" OnClick="PractitionerProfessionAddButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerProfessionUpdateButton" runat="server" Text="update" OnClick="PractitionerProfessionUpdateButton_Click" /> &nbsp &nbsp
+        <asp:Button ID="PractitionerProfessionDeleteButton" runat="server" Text="delete" OnClick="PractitionerProfessionDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerProfessionClearButton" runat="server" Text="clear" OnClick="PractitionerProfessionClearButton_Click" /> <br />
+
         <%--<textarea id="BioTextArea" cols="40" rows="5">Add Bio/Interests...</textarea>--%>        <%--<input id="PractitionerBioButton" type="button" value="save" />--%>
     
 
@@ -462,7 +471,7 @@
         <asp:TextBox ID="BioTextArea" TextMode="multiline" columns="40" Rows="5" placeholder="Add bio/interests..." runat="server"></asp:TextBox>
         <%--<input id="UpdatePractitionerProfileButton" type="submit" value="update" />--%>
     <br /><br />
-        <asp:Button ID="PractitionerBioButton" runat="server" Text="save" />
+        <asp:Button ID="PractitionerBioButton" runat="server" Text="save" OnClick="PractitionerBioButton_Click" />
     <%--<input id="PractitionerBioButton" type="button" value="save" />--%>
     </>
 

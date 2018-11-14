@@ -107,218 +107,7 @@ namespace LewandowskiProject
 
                     //Logic For Which State Will Be Selected
 
-                    if (state.Equals("Alabama") || state.Equals("AL") || state.Equals("Al"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 0;
-                    }
-                    else if (state.Equals("Alaska") || state.Equals("AK") || state.Equals("Ak"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 1;
-                    }
-                    else if (state.Equals("Arizona") || state.Equals("AZ") || state.Equals("Az"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 2;
-                    }
-                    else if (state.Equals("Arkansas") || state.Equals("AR") || state.Equals("Ar"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 3;
-                    }
-                    else if (state.Equals("California") || state.Equals("CA") || state.Equals("Ca"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 4;
-                    }
-                    else if (state.Equals("Colorado") || state.Equals("CO") || state.Equals("Co"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 5;
-                    }
-                    else if (state.Equals("Connecticut") || state.Equals("CT") || state.Equals("Ct"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 6;
-                    }
-                    else if (state.Equals("Delaware") || state.Equals("DE") || state.Equals("De"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 7;
-                    }
-                    else if (state.Equals("District of Columbia") || state.Equals("DC") || state.Equals("Dc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 8;
-                    }
-                    else if (state.Equals("Florida") || state.Equals("FL") || state.Equals("Fl"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 9;
-                    }
-                    else if (state.Equals("Georgia") || state.Equals("GA") || state.Equals("Ga"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 10;
-                    }
-                    else if (state.Equals("Hawaii") || state.Equals("HI") || state.Equals("Hi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 11;
-                    }
-                    else if (state.Equals("Idaho") || state.Equals("ID") || state.Equals("Id"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 12;
-                    }
-                    else if (state.Equals("Illinois") || state.Equals("IL") || state.Equals("Il"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 13;
-                    }
-                    else if (state.Equals("Indiana") || state.Equals("IN") || state.Equals("In"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 14;
-                    }
-                    else if (state.Equals("Iowa") || state.Equals("IA") || state.Equals("Ia"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 15;
-                    }
-                    else if (state.Equals("Kansas") || state.Equals("KS") || state.Equals("Ks"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 16;
-                    }
-                    else if (state.Equals("Kentucky") || state.Equals("KY") || state.Equals("Ky"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 17;
-                    }
-                    else if (state.Equals("Louisiana") || state.Equals("LA") || state.Equals("La"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 18;
-                    }
-                    else if (state.Equals("Maine") || state.Equals("ME") || state.Equals("Me"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 19;
-                    }
-                    else if (state.Equals("Maryland") || state.Equals("MD") || state.Equals("Md"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 20;
-                    }
-                    else if (state.Equals("Massachusetts") || state.Equals("MA") || state.Equals("Ma"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 21;
-                    }
-                    else if (state.Equals("Michigan") || state.Equals("MI") || state.Equals("Mi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 22;
-                    }
-                    else if (state.Equals("Minnesota") || state.Equals("MN") || state.Equals("Mn"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 23;
-                    }
-                    else if (state.Equals("Mississippi") || state.Equals("MS") || state.Equals("Ms"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 24;
-                    }
-                    else if (state.Equals("Missouri") || state.Equals("MO") || state.Equals("Mo"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 25;
-                    }
-                    else if (state.Equals("Montana") || state.Equals("MT") || state.Equals("Mt"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 26;
-                    }
-                    else if (state.Equals("Nebraska") || state.Equals("NE") || state.Equals("Ne"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 27;
-                    }
-                    else if (state.Equals("Nevada") || state.Equals("NV") || state.Equals("Nv"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 28;
-                    }
-                    else if (state.Equals("New Hampshire") || state.Equals("NH") || state.Equals("Nh"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 29;
-                    }
-                    else if (state.Equals("New Jersey") || state.Equals("NJ") || state.Equals("Nj"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 30;
-                    }
-                    else if (state.Equals("New Mexico") || state.Equals("NM") || state.Equals("Nm"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 31;
-                    }
-                    else if (state.Equals("New York") || state.Equals("NY") || state.Equals("Ny"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 32;
-                    }
-                    else if (state.Equals("North Carolina") || state.Equals("NC") || state.Equals("Nc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 33;
-                    }
-                    else if (state.Equals("North Dakota") || state.Equals("ND") || state.Equals("Nd"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 34;
-                    }
-                    else if (state.Equals("Ohio") || state.Equals("OH") || state.Equals("Oh"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 35;
-                    }
-                    else if (state.Equals("Oklahoma") || state.Equals("OK") || state.Equals("Ok"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 36;
-                    }
-                    else if (state.Equals("Oregon") || state.Equals("OR") || state.Equals("Or"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 37;
-                    }
-                    else if (state.Equals("Pennsylvania") || state.Equals("PA") || state.Equals("Pa"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 38;
-                    }
-                    else if (state.Equals("Puerto Rico") || state.Equals("PR") || state.Equals("Pr"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 39;
-                    }
-                    else if (state.Equals("Rhode Island") || state.Equals("RI") || state.Equals("Ri"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 40;
-                    }
-                    else if (state.Equals("South Carolina") || state.Equals("SC") || state.Equals("Sc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 41;
-                    }
-                    else if (state.Equals("South Dakota") || state.Equals("SD") || state.Equals("Sd"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 42;
-                    }
-                    else if (state.Equals("Tennessee") || state.Equals("TN") || state.Equals("Tn"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 43;
-                    }
-                    else if (state.Equals("Texas") || state.Equals("TX") || state.Equals("Tx"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 44;
-                    }
-                    else if (state.Equals("Utah") || state.Equals("UT") || state.Equals("Ut"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 45;
-                    }
-                    else if (state.Equals("Vermont") || state.Equals("VT") || state.Equals("Vt"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 46;
-                    }
-                    else if (state.Equals("Virginia") || state.Equals("VA") || state.Equals("Va"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 47;
-                    }
-                    else if (state.Equals("Virgin Islands") || state.Equals("VI") || state.Equals("Vi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 48;
-                    }
-                    else if (state.Equals("Washington") || state.Equals("WA") || state.Equals("Wa"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 49;
-                    }
-                    else if (state.Equals("West Virginia") || state.Equals("WV") || state.Equals("Wv"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 50;
-                    }
-                    else if (state.Equals("Wisconsin") || state.Equals("WI") || state.Equals("Wi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 51;
-                    }
-                    else if (state.Equals("Wyoming") || state.Equals("WY") || state.Equals("Wy"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 52;
-                    }
+                    PractitionerPersonalInformationStateDropDownList.SelectedIndex = getStateIndex(state);
                 }
             }
         }
@@ -349,6 +138,8 @@ namespace LewandowskiProject
                     if (myReader.HasRows)
                     {
                         PractitionerAddEducationDropDownList.Visible = true;
+                        PractitionerAddEducationDropDownList.Items.Clear();
+                        PractitionerEducationAddButton.Visible = false;
                         PractitionerEducationUpdateButton.Visible = true;
                         PractitionerEducationDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -364,6 +155,7 @@ namespace LewandowskiProject
                         PractitionerAddEducationDropDownList.Visible = false;
                         PractitionerEducationUpdateButton.Visible = false;
                         PractitionerEducationDeleteButton.Visible = false;
+                        PractitionerEducationAddButton.Visible = true;
                     }
                 }
             }
@@ -431,6 +223,7 @@ namespace LewandowskiProject
 
                     PractitionerEducationSchoolNameText.Text = InstitutionName;
                     PractitionerEducationYearInText.Text = YearInSchool;
+                    PractitionerEducationGradYearText.Text = GraduationYear;
 
                     if (DegreeEarned.Equals("Associates"))
                     {
@@ -486,6 +279,8 @@ namespace LewandowskiProject
                     if (myReader.HasRows)
                     {
                         PractitionerAddInternshipsDropDownList.Visible = true;
+                        PractitionerAddInternshipsDropDownList.Items.Clear();
+                        PractitionerInternshipsAddButton.Visible = false;
                         PractitionerInternshipsUpdateButton.Visible = true;
                         PractitionerInternshipsDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -502,6 +297,7 @@ namespace LewandowskiProject
                         PractitionerAddInternshipsDropDownList.Visible = false;
                         PractitionerInternshipsUpdateButton.Visible = false;
                         PractitionerInternshipsDeleteButton.Visible = false;
+                        PractitionerInternshipsAddButton.Visible = true;
                     }
                 }
             }
@@ -595,223 +391,28 @@ namespace LewandowskiProject
                         PractitionerInternshipsDropDownList.SelectedIndex = 2;
                     }
 
+
+                    if(areaOfExpertise.Equals("Dentistry"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 0;
+                    }
+                    else if(areaOfExpertise.Equals("Surgery"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 1;
+                    }
+                    else if(areaOfExpertise.Equals("Other"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 2;
+                    }
+
+
                     PractitionerInternshipsInstituteNameText.Text = instituteName;
                     PractitionerInternshipsInstituteCity.Text = city;
 
                     //Logic For Which State Will Be Selected
 
-                    if (state.Equals("Alabama") || state.Equals("AL") || state.Equals("Al"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 0;
-                    }
-                    else if (state.Equals("Alaska") || state.Equals("AK") || state.Equals("Ak"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 1;
-                    }
-                    else if (state.Equals("Arizona") || state.Equals("AZ") || state.Equals("Az"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 2;
-                    }
-                    else if (state.Equals("Arkansas") || state.Equals("AR") || state.Equals("Ar"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 3;
-                    }
-                    else if (state.Equals("California") || state.Equals("CA") || state.Equals("Ca"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 4;
-                    }
-                    else if (state.Equals("Colorado") || state.Equals("CO") || state.Equals("Co"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 5;
-                    }
-                    else if (state.Equals("Connecticut") || state.Equals("CT") || state.Equals("Ct"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 6;
-                    }
-                    else if (state.Equals("Delaware") || state.Equals("DE") || state.Equals("De"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 7;
-                    }
-                    else if (state.Equals("District of Columbia") || state.Equals("DC") || state.Equals("Dc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 8;
-                    }
-                    else if (state.Equals("Florida") || state.Equals("FL") || state.Equals("Fl"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 9;
-                    }
-                    else if (state.Equals("Georgia") || state.Equals("GA") || state.Equals("Ga"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 10;
-                    }
-                    else if (state.Equals("Hawaii") || state.Equals("HI") || state.Equals("Hi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 11;
-                    }
-                    else if (state.Equals("Idaho") || state.Equals("ID") || state.Equals("Id"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 12;
-                    }
-                    else if (state.Equals("Illinois") || state.Equals("IL") || state.Equals("Il"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 13;
-                    }
-                    else if (state.Equals("Indiana") || state.Equals("IN") || state.Equals("In"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 14;
-                    }
-                    else if (state.Equals("Iowa") || state.Equals("IA") || state.Equals("Ia"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 15;
-                    }
-                    else if (state.Equals("Kansas") || state.Equals("KS") || state.Equals("Ks"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 16;
-                    }
-                    else if (state.Equals("Kentucky") || state.Equals("KY") || state.Equals("Ky"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 17;
-                    }
-                    else if (state.Equals("Louisiana") || state.Equals("LA") || state.Equals("La"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 18;
-                    }
-                    else if (state.Equals("Maine") || state.Equals("ME") || state.Equals("Me"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 19;
-                    }
-                    else if (state.Equals("Maryland") || state.Equals("MD") || state.Equals("Md"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 20;
-                    }
-                    else if (state.Equals("Massachusetts") || state.Equals("MA") || state.Equals("Ma"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 21;
-                    }
-                    else if (state.Equals("Michigan") || state.Equals("MI") || state.Equals("Mi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 22;
-                    }
-                    else if (state.Equals("Minnesota") || state.Equals("MN") || state.Equals("Mn"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 23;
-                    }
-                    else if (state.Equals("Mississippi") || state.Equals("MS") || state.Equals("Ms"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 24;
-                    }
-                    else if (state.Equals("Missouri") || state.Equals("MO") || state.Equals("Mo"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 25;
-                    }
-                    else if (state.Equals("Montana") || state.Equals("MT") || state.Equals("Mt"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 26;
-                    }
-                    else if (state.Equals("Nebraska") || state.Equals("NE") || state.Equals("Ne"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 27;
-                    }
-                    else if (state.Equals("Nevada") || state.Equals("NV") || state.Equals("Nv"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 28;
-                    }
-                    else if (state.Equals("New Hampshire") || state.Equals("NH") || state.Equals("Nh"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 29;
-                    }
-                    else if (state.Equals("New Jersey") || state.Equals("NJ") || state.Equals("Nj"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 30;
-                    }
-                    else if (state.Equals("New Mexico") || state.Equals("NM") || state.Equals("Nm"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 31;
-                    }
-                    else if (state.Equals("New York") || state.Equals("NY") || state.Equals("Ny"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 32;
-                    }
-                    else if (state.Equals("North Carolina") || state.Equals("NC") || state.Equals("Nc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 33;
-                    }
-                    else if (state.Equals("North Dakota") || state.Equals("ND") || state.Equals("Nd"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 34;
-                    }
-                    else if (state.Equals("Ohio") || state.Equals("OH") || state.Equals("Oh"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 35;
-                    }
-                    else if (state.Equals("Oklahoma") || state.Equals("OK") || state.Equals("Ok"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 36;
-                    }
-                    else if (state.Equals("Oregon") || state.Equals("OR") || state.Equals("Or"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 37;
-                    }
-                    else if (state.Equals("Pennsylvania") || state.Equals("PA") || state.Equals("Pa"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 38;
-                    }
-                    else if (state.Equals("Puerto Rico") || state.Equals("PR") || state.Equals("Pr"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 39;
-                    }
-                    else if (state.Equals("Rhode Island") || state.Equals("RI") || state.Equals("Ri"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 40;
-                    }
-                    else if (state.Equals("South Carolina") || state.Equals("SC") || state.Equals("Sc"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 41;
-                    }
-                    else if (state.Equals("South Dakota") || state.Equals("SD") || state.Equals("Sd"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 42;
-                    }
-                    else if (state.Equals("Tennessee") || state.Equals("TN") || state.Equals("Tn"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 43;
-                    }
-                    else if (state.Equals("Texas") || state.Equals("TX") || state.Equals("Tx"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 44;
-                    }
-                    else if (state.Equals("Utah") || state.Equals("UT") || state.Equals("Ut"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 45;
-                    }
-                    else if (state.Equals("Vermont") || state.Equals("VT") || state.Equals("Vt"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 46;
-                    }
-                    else if (state.Equals("Virginia") || state.Equals("VA") || state.Equals("Va"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 47;
-                    }
-                    else if (state.Equals("Virgin Islands") || state.Equals("VI") || state.Equals("Vi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 48;
-                    }
-                    else if (state.Equals("Washington") || state.Equals("WA") || state.Equals("Wa"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 49;
-                    }
-                    else if (state.Equals("West Virginia") || state.Equals("WV") || state.Equals("Wv"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 50;
-                    }
-                    else if (state.Equals("Wisconsin") || state.Equals("WI") || state.Equals("Wi"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 51;
-                    }
-                    else if (state.Equals("Wyoming") || state.Equals("WY") || state.Equals("Wy"))
-                    {
-                        PractitionerPersonalInformationStateDropDownList.SelectedIndex = 52;
-                    }
+                    PractitionerInternshipsInstituteStateDropDownList.SelectedIndex = getStateIndex(state);
+
 
                     //Logic For Which Area of Expertise Will Be Selected
 
@@ -870,6 +471,8 @@ namespace LewandowskiProject
                     if (myReader.HasRows)
                     {
                         PractitionerAddPrfessionDropDownList.Visible = true;
+                        PractitionerAddPrfessionDropDownList.Items.Clear();
+                        PractitionerProfessionAddButton.Visible = false;
                         PractitionerProfessionUpdateButton.Visible = true;
                         PractitionerProfessionDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -886,6 +489,7 @@ namespace LewandowskiProject
                         PractitionerAddPrfessionDropDownList.Visible = false;
                         PractitionerProfessionUpdateButton.Visible = false;
                         PractitionerProfessionDeleteButton.Visible = false;
+                        PractitionerProfessionAddButton.Visible = true;
                     }
                 }
             }
@@ -967,218 +571,8 @@ namespace LewandowskiProject
 
                     //Logic For Which State Will Be Selected
 
-                    if (state.Equals("Alabama") || state.Equals("AL") || state.Equals("Al"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 0;
-                    }
-                    else if (state.Equals("Alaska") || state.Equals("AK") || state.Equals("Ak"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 1;
-                    }
-                    else if (state.Equals("Arizona") || state.Equals("AZ") || state.Equals("Az"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 2;
-                    }
-                    else if (state.Equals("Arkansas") || state.Equals("AR") || state.Equals("Ar"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 3;
-                    }
-                    else if (state.Equals("California") || state.Equals("CA") || state.Equals("Ca"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 4;
-                    }
-                    else if (state.Equals("Colorado") || state.Equals("CO") || state.Equals("Co"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 5;
-                    }
-                    else if (state.Equals("Connecticut") || state.Equals("CT") || state.Equals("Ct"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 6;
-                    }
-                    else if (state.Equals("Delaware") || state.Equals("DE") || state.Equals("De"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 7;
-                    }
-                    else if (state.Equals("District of Columbia") || state.Equals("DC") || state.Equals("Dc"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 8;
-                    }
-                    else if (state.Equals("Florida") || state.Equals("FL") || state.Equals("Fl"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 9;
-                    }
-                    else if (state.Equals("Georgia") || state.Equals("GA") || state.Equals("Ga"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 10;
-                    }
-                    else if (state.Equals("Hawaii") || state.Equals("HI") || state.Equals("Hi"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 11;
-                    }
-                    else if (state.Equals("Idaho") || state.Equals("ID") || state.Equals("Id"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 12;
-                    }
-                    else if (state.Equals("Illinois") || state.Equals("IL") || state.Equals("Il"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 13;
-                    }
-                    else if (state.Equals("Indiana") || state.Equals("IN") || state.Equals("In"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 14;
-                    }
-                    else if (state.Equals("Iowa") || state.Equals("IA") || state.Equals("Ia"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 15;
-                    }
-                    else if (state.Equals("Kansas") || state.Equals("KS") || state.Equals("Ks"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 16;
-                    }
-                    else if (state.Equals("Kentucky") || state.Equals("KY") || state.Equals("Ky"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 17;
-                    }
-                    else if (state.Equals("Louisiana") || state.Equals("LA") || state.Equals("La"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 18;
-                    }
-                    else if (state.Equals("Maine") || state.Equals("ME") || state.Equals("Me"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 19;
-                    }
-                    else if (state.Equals("Maryland") || state.Equals("MD") || state.Equals("Md"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 20;
-                    }
-                    else if (state.Equals("Massachusetts") || state.Equals("MA") || state.Equals("Ma"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 21;
-                    }
-                    else if (state.Equals("Michigan") || state.Equals("MI") || state.Equals("Mi"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 22;
-                    }
-                    else if (state.Equals("Minnesota") || state.Equals("MN") || state.Equals("Mn"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 23;
-                    }
-                    else if (state.Equals("Mississippi") || state.Equals("MS") || state.Equals("Ms"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 24;
-                    }
-                    else if (state.Equals("Missouri") || state.Equals("MO") || state.Equals("Mo"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 25;
-                    }
-                    else if (state.Equals("Montana") || state.Equals("MT") || state.Equals("Mt"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 26;
-                    }
-                    else if (state.Equals("Nebraska") || state.Equals("NE") || state.Equals("Ne"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 27;
-                    }
-                    else if (state.Equals("Nevada") || state.Equals("NV") || state.Equals("Nv"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 28;
-                    }
-                    else if (state.Equals("New Hampshire") || state.Equals("NH") || state.Equals("Nh"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 29;
-                    }
-                    else if (state.Equals("New Jersey") || state.Equals("NJ") || state.Equals("Nj"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 30;
-                    }
-                    else if (state.Equals("New Mexico") || state.Equals("NM") || state.Equals("Nm"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 31;
-                    }
-                    else if (state.Equals("New York") || state.Equals("NY") || state.Equals("Ny"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 32;
-                    }
-                    else if (state.Equals("North Carolina") || state.Equals("NC") || state.Equals("Nc"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 33;
-                    }
-                    else if (state.Equals("North Dakota") || state.Equals("ND") || state.Equals("Nd"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 34;
-                    }
-                    else if (state.Equals("Ohio") || state.Equals("OH") || state.Equals("Oh"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 35;
-                    }
-                    else if (state.Equals("Oklahoma") || state.Equals("OK") || state.Equals("Ok"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 36;
-                    }
-                    else if (state.Equals("Oregon") || state.Equals("OR") || state.Equals("Or"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 37;
-                    }
-                    else if (state.Equals("Pennsylvania") || state.Equals("PA") || state.Equals("Pa"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 38;
-                    }
-                    else if (state.Equals("Puerto Rico") || state.Equals("PR") || state.Equals("Pr"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 39;
-                    }
-                    else if (state.Equals("Rhode Island") || state.Equals("RI") || state.Equals("Ri"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 40;
-                    }
-                    else if (state.Equals("South Carolina") || state.Equals("SC") || state.Equals("Sc"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 41;
-                    }
-                    else if (state.Equals("South Dakota") || state.Equals("SD") || state.Equals("Sd"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 42;
-                    }
-                    else if (state.Equals("Tennessee") || state.Equals("TN") || state.Equals("Tn"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 43;
-                    }
-                    else if (state.Equals("Texas") || state.Equals("TX") || state.Equals("Tx"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 44;
-                    }
-                    else if (state.Equals("Utah") || state.Equals("UT") || state.Equals("Ut"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 45;
-                    }
-                    else if (state.Equals("Vermont") || state.Equals("VT") || state.Equals("Vt"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 46;
-                    }
-                    else if (state.Equals("Virginia") || state.Equals("VA") || state.Equals("Va"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 47;
-                    }
-                    else if (state.Equals("Virgin Islands") || state.Equals("VI") || state.Equals("Vi"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 48;
-                    }
-                    else if (state.Equals("Washington") || state.Equals("WA") || state.Equals("Wa"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 49;
-                    }
-                    else if (state.Equals("West Virginia") || state.Equals("WV") || state.Equals("Wv"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 50;
-                    }
-                    else if (state.Equals("Wisconsin") || state.Equals("WI") || state.Equals("Wi"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 51;
-                    }
-                    else if (state.Equals("Wyoming") || state.Equals("WY") || state.Equals("Wy"))
-                    {
-                        PractitionerProfessionStateDropDownList.SelectedIndex = 52;
-                    }
+
+                    PractitionerProfessionStateDropDownList.SelectedIndex = getStateIndex(state);
 
                     PractitionerYearsInLabelText.Text = yearsInProfession;
 
@@ -1242,5 +636,795 @@ namespace LewandowskiProject
                 }
             }
         }
+
+        //Update Store Procedures
+        private void update_practitionerInfo(int PersonId,string FirstName,string LastName,string Gender,string City,string State,string Phone1,string Email)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_practitionerInfo", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("PersonId", PersonId);
+                    cmd.Parameters["PersonId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("FirstName", FirstName);
+                    cmd.Parameters["FirstName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("LastName", LastName);
+                    cmd.Parameters["LastName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Gender", Gender);
+                    cmd.Parameters["Gender"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("City", City);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("State", State);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Phone1", Phone1);
+                    cmd.Parameters["Phone1"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Email", Email);
+                    cmd.Parameters["Email"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerPersonalInfoSaveButton_Click(object sender, EventArgs e)
+        {
+            update_practitionerInfo(personID, PractitionerFirstName.Text, PractitionerLastName.Text, PractitionerGenderRadioButtonList.SelectedItem.ToString(), PractitionerCity.Text, PractitionerPersonalInformationStateDropDownList.SelectedItem.ToString(), PractitionerPhoneNumber.Text, PractitionerEmail.Text);
+        }
+
+        private void update_practitionerEducation(int EducationId,string InstitutionName,string YearInSchool,string GraduationYear,string DegreeEarned,string Major,string Minor)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_practitionerEducation", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("EducationId", EducationId);
+                    cmd.Parameters["EducationId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("InstitutionName", InstitutionName);
+                    cmd.Parameters["InstitutionName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("YearInSchool", YearInSchool);
+                    cmd.Parameters["YearInSchool"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("GraduationYear", GraduationYear);
+                    cmd.Parameters["GraduationYear"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("DegreeEarned", DegreeEarned);
+                    cmd.Parameters["DegreeEarned"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Major", Major);
+                    cmd.Parameters["Major"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Minor", Minor);
+                    cmd.Parameters["Minor"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerEducationUpdateButton_Click(object sender, EventArgs e)
+        {
+            update_practitionerEducation(Convert.ToInt16(PractitionerAddEducationDropDownList.SelectedValue),PractitionerEducationSchoolNameText.Text,PractitionerEducationYearInText.Text,PractitionerEducationGradYearText.Text,PractitionerEducationDegreeEarnedDropDownList.SelectedItem.ToString(),PractitionerEducationMajorText.Text,PractitionerEducationMinorText.Text);
+            get_practitionersEducations();
+        }
+
+        private void update_practitionersProfessionalHealthExperience(int ProfessionalHealthExperienceId,string ProfessionalHealthExperienceType,string InstituteName,string City,string State,string AreaOfExpertise,string PositionTitle,string Description,int CurrentJob)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_practitionersProfessionalHealthExperience", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("ProfessionalHealthExperienceId", ProfessionalHealthExperienceId);
+                    cmd.Parameters["ProfessionalHealthExperienceId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("ProfessionalHealthExperienceType", ProfessionalHealthExperienceType);
+                    cmd.Parameters["ProfessionalHealthExperienceType"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("InstituteName", InstituteName);
+                    cmd.Parameters["InstituteName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("City", City);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("State", State);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("AreaOfExpertise", AreaOfExpertise);
+                    cmd.Parameters["AreaOfExpertise"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("PositionTitle", PositionTitle);
+                    cmd.Parameters["PositionTitle"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Description", Description);
+                    cmd.Parameters["Description"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("CurrentJob", CurrentJob);
+                    cmd.Parameters["CurrentJob"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerInternshipsUpdateButton_Click(object sender, EventArgs e)
+        {
+            int CurrentJob = 0;
+
+            if (PractitionerInternshipsCurrentRadioButtonList.SelectedIndex == 0)
+            {
+                CurrentJob = 0;
+            }
+            else if (PractitionerInternshipsCurrentRadioButtonList.SelectedIndex == 1)
+            {
+                CurrentJob = 1;
+            }
+
+            update_practitionersProfessionalHealthExperience(Convert.ToInt16(PractitionerAddInternshipsDropDownList.SelectedValue), PractitionerInternshipsDropDownList.SelectedItem.ToString(), PractitionerInternshipsInstituteNameText.Text, PractitionerInternshipsInstituteCity.Text,PractitionerInternshipsInstituteStateDropDownList.SelectedItem.ToString(),PractitionerInternshipsAreaDropDownList.SelectedItem.ToString(),PractitionerInternshipNameOrTitle.Text, PractitionerInternshipsTextArea.Text, CurrentJob);
+            get_practitionersProfessionalHealthExperiences();
+        }
+
+        private void update_practitionerProfession(int ProfessionId,string ProfessionTitle,string Specialty,string NameOfCompany,string City,string State,string YearsInProfession,string AreaOfExpertise,int CurrentJob)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_practitionerProfession", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("ProfessionId", ProfessionId);
+                    cmd.Parameters["ProfessionId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("ProfessionTitle", ProfessionTitle);
+                    cmd.Parameters["ProfessionTitle"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Specialty", Specialty);
+                    cmd.Parameters["Specialty"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("NameOfCompany", NameOfCompany);
+                    cmd.Parameters["NameOfCompany"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("City", City);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("State", State);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("YearsInProfession", YearsInProfession);
+                    cmd.Parameters["YearsInProfession"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("AreaOfExpertise", AreaOfExpertise);
+                    cmd.Parameters["AreaOfExpertise"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("CurrentJob", CurrentJob);
+                    cmd.Parameters["CurrentJob"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerProfessionUpdateButton_Click(object sender, EventArgs e)
+        {
+            int CurrentJob = 0;
+
+            if (PractitionerProfessionCurrentRadioButtonList.SelectedIndex == 0)
+            {
+                CurrentJob = 0;
+            }
+            else if (PractitionerProfessionCurrentRadioButtonList.SelectedIndex == 1)
+            {
+                CurrentJob = 1;
+            }
+
+            update_practitionerProfession(Convert.ToInt16(PractitionerAddPrfessionDropDownList.SelectedValue),PractitionerProfessionNameOrTitle.Text,PractitionerProfessionSpecialty.Text,PractitionerProfessionLocationText.Text,PractitionerProfessionCity.Text,PractitionerProfessionStateDropDownList.SelectedItem.ToString(),PractitionerYearsInLabelText.Text,PractitionerProfessionDropDownList.SelectedItem.ToString(),CurrentJob);
+            get_practitionersProfessions();
+        }
+
+        private void update_practitionerBio(int personId,string Bio)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update_practitionerBio", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("personId", personId);
+                    cmd.Parameters["personId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Bio", Bio);
+                    cmd.Parameters["Bio"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerBioButton_Click(object sender, EventArgs e)
+        {
+            update_practitionerBio(personID,BioTextArea.Text);
+        }
+
+
+        //Delete Methods
+
+        private void delete_practitionerEducation(int EducationId)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("delete_practitionerEducation", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("EducationId", EducationId);
+                    cmd.Parameters["EducationId"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerEducationDeleteButton_Click(object sender, EventArgs e)
+        {
+            delete_practitionerEducation(Convert.ToInt16(PractitionerAddEducationDropDownList.SelectedValue));
+            clearEducationArea();
+            get_practitionersEducations();
+        }
+
+        private void clearEducationArea()
+        {
+            PractitionerAddEducationDropDownList.Visible = false;
+            PractitionerEducationSchoolNameText.Text = "";
+            PractitionerEducationYearInText.Text = "";
+            PractitionerEducationGradYearText.Text = "";
+            PractitionerEducationDegreeEarnedDropDownList.SelectedIndex = 0;
+            PractitionerEducationMajorText.Text = "";
+            PractitionerEducationMinorText.Text = "";
+        }
+
+        private void delete_practitionersProfessionalHealthExperience(int ProfessionalHealthExperienceId)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("delete_practitionersProfessionalHealthExperience", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("ProfessionalHealthExperienceId", ProfessionalHealthExperienceId);
+                    cmd.Parameters["ProfessionalHealthExperienceId"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerInternshipsDeleteButton_Click(object sender, EventArgs e)
+        {
+            delete_practitionersProfessionalHealthExperience(Convert.ToInt16(PractitionerAddInternshipsDropDownList.SelectedValue));
+            clearPractitionersProfessionalHealthExperienceArea();
+            get_practitionersProfessionalHealthExperiences();
+        }
+
+        private void clearPractitionersProfessionalHealthExperienceArea()
+        {
+            PractitionerAddInternshipsDropDownList.Visible = false;
+            PractitionerInternshipNameOrTitle.Text = "";
+            PractitionerInternshipsAreaDropDownList.SelectedIndex = 0;
+            PractitionerInternshipsInstituteNameText.Text = "";
+            PractitionerInternshipsInstituteCity.Text = "";
+            PractitionerInternshipsInstituteStateDropDownList.SelectedIndex = 0;
+            PractitionerInternshipsTextArea.Text = "";
+            PractitionerInternshipsCurrentRadioButtonList.SelectedIndex = 0;
+        }
+
+        private void delete_practitionersProfession(int ProfessionId)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("delete_practitionersProfession", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("ProfessionId", ProfessionId);
+                    cmd.Parameters["ProfessionId"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerProfessionDeleteButton_Click(object sender, EventArgs e)
+        {
+            delete_practitionersProfession(Convert.ToInt16(PractitionerAddPrfessionDropDownList.SelectedValue));
+            clearPractitionersProfessionArea();
+            get_practitionersProfessions();
+        }
+
+        private void clearPractitionersProfessionArea()
+        {
+            PractitionerAddPrfessionDropDownList.Visible = false;
+            PractitionerProfessionNameOrTitle.Text = "";
+            PractitionerProfessionDropDownList.SelectedIndex = 0;
+            PractitionerProfessionLocationText.Text = "";
+            PractitionerProfessionCity.Text = "";
+            PractitionerProfessionStateDropDownList.SelectedIndex = 0;
+            PractitionerProfessionSpecialty.Text = "";
+            PractitionerProfessionCurrentRadioButtonList.SelectedIndex = 0;
+            PractitionerYearsInLabelText.Text = "";
+        }
+
+        //insert methods
+
+        private void insert_practitionersEducation(int PersonId,string InstitutionName,string YearInSchool,string GraduationYear,string DegreeEarned,string Major,string Minor)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("insert_practitionersEducation", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("PersonId", PersonId);
+                    cmd.Parameters["PersonId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("InstitutionName", InstitutionName);
+                    cmd.Parameters["InstitutionName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("YearInSchool", YearInSchool);
+                    cmd.Parameters["YearInSchool"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("GraduationYear", GraduationYear);
+                    cmd.Parameters["GraduationYear"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("DegreeEarned", DegreeEarned);
+                    cmd.Parameters["DegreeEarned"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Major", Major);
+                    cmd.Parameters["Major"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Minor", Minor);
+                    cmd.Parameters["Minor"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerEducationAddButton_Click(object sender, EventArgs e)
+        {
+            string InstitutionName = PractitionerEducationSchoolNameText.Text;
+            string YearInSchool = PractitionerEducationYearInText.Text;
+            string GraduationYear = PractitionerEducationGradYearText.Text;
+            string DegreeEarned = PractitionerEducationDegreeEarnedDropDownList.SelectedItem.ToString();
+            string Major = PractitionerEducationMajorText.Text;
+            string Minor = PractitionerEducationMinorText.Text;
+            if((InstitutionName != "") && (YearInSchool != "") &&(GraduationYear != "") && (DegreeEarned != "") && (Major != "") && (Minor != ""))
+            {
+                insert_practitionersEducation(personID,InstitutionName,YearInSchool,GraduationYear,DegreeEarned,Major,Minor);
+                clearEducationArea();
+                get_practitionersEducations();
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please ensure all fields are selected or inputed.');", true);
+            }
+        }
+
+        protected void PractitionerEducationClearButton_Click(object sender, EventArgs e)
+        {
+            PractitionerEducationAddButton.Visible = true;
+            PractitionerEducationUpdateButton.Visible = false;
+            PractitionerEducationDeleteButton.Visible = false;
+            clearEducationArea();
+        }
+
+        private void insert_practitionersProfessionalHealthExperience(int PersonId,string ProfessionalHealthExperienceType,string InstituteName,string City,string State,string AreaOfExpertise,string PositionTitle,string Description,int CurrentJob)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("insert_practitionersProfessionalHealthExperience", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("PersonId", PersonId);
+                    cmd.Parameters["PersonId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("ProfessionalHealthExperienceType", ProfessionalHealthExperienceType);
+                    cmd.Parameters["ProfessionalHealthExperienceType"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("InstituteName", InstituteName);
+                    cmd.Parameters["InstituteName"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("City", City);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("State", State);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("AreaOfExpertise", AreaOfExpertise);
+                    cmd.Parameters["AreaOfExpertise"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("PositionTitle", PositionTitle);
+                    cmd.Parameters["PositionTitle"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Description", Description);
+                    cmd.Parameters["Description"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("CurrentJob", CurrentJob);
+                    cmd.Parameters["CurrentJob"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerInternshipsAddButton_Click(object sender, EventArgs e)
+        {
+            string ProfessionalHealthExperienceType = PractitionerInternshipsDropDownList.SelectedItem.ToString();
+            string InstituteName = PractitionerInternshipsInstituteNameText.Text;
+            string City = PractitionerInternshipsInstituteCity.Text;
+            string State = PractitionerInternshipsInstituteStateDropDownList.SelectedItem.ToString();
+            string AreaOfExpertise = PractitionerInternshipsAreaDropDownList.SelectedItem.ToString();
+            string PositionTitle = PractitionerInternshipNameOrTitle.Text;
+            string Description = PractitionerInternshipsTextArea.Text;
+            int CurrentJob = PractitionerInternshipsCurrentRadioButtonList.SelectedIndex;
+            if((InstituteName != "") && (City != "") && (PositionTitle != "") && (Description != ""))
+            {
+                insert_practitionersProfessionalHealthExperience(personID, ProfessionalHealthExperienceType, InstituteName, City, State, AreaOfExpertise, PositionTitle, Description, CurrentJob);
+                clearPractitionersProfessionalHealthExperienceArea();
+                get_practitionersProfessionalHealthExperiences();
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please ensure all fields are selected or inputed.');", true);
+            }
+        }
+
+        protected void PractitionerInternshipsClearButton_Click(object sender, EventArgs e)
+        {
+            PractitionerInternshipsAddButton.Visible = true;
+            PractitionerInternshipsUpdateButton.Visible = false;
+            PractitionerInternshipsDeleteButton.Visible = false;
+            clearPractitionersProfessionalHealthExperienceArea();
+        }
+
+        private void insert_practitionersProfession(int PersonId,string ProfessionTitle,string Specialty,string NameOfCompany,string City,string State,string YearsInProfession,string AreaOfExpertise,int CurrentJob)
+        {
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("insert_practitionersProfession", con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    //In parameters
+
+                    cmd.Parameters.AddWithValue("PersonId", PersonId);
+                    cmd.Parameters["PersonId"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("ProfessionTitle", ProfessionTitle);
+                    cmd.Parameters["ProfessionTitle"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("Specialty", Specialty);
+                    cmd.Parameters["Specialty"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("NameOfCompany", NameOfCompany);
+                    cmd.Parameters["NameOfCompany"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("City", City);
+                    cmd.Parameters["City"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("State", State);
+                    cmd.Parameters["State"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("YearsInProfession", YearsInProfession);
+                    cmd.Parameters["YearsInProfession"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("AreaOfExpertise", AreaOfExpertise);
+                    cmd.Parameters["AreaOfExpertise"].Direction = ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("CurrentJob", CurrentJob);
+                    cmd.Parameters["CurrentJob"].Direction = ParameterDirection.Input;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        protected void PractitionerProfessionAddButton_Click(object sender, EventArgs e)
+        {
+            string ProfessionTitle = PractitionerProfessionNameOrTitle.Text;
+            string Specialty = PractitionerProfessionSpecialty.Text;
+            string NameOfCompany = PractitionerProfessionLocationText.Text;
+            string City = PractitionerProfessionCity.Text;
+            string State = PractitionerProfessionStateDropDownList.SelectedItem.ToString();
+            string YearsInProfession = PractitionerYearsInLabelText.Text;
+            string AreaOfExpertise = PractitionerProfessionDropDownList.SelectedItem.ToString();
+            int CurrentJob = PractitionerProfessionCurrentRadioButtonList.SelectedIndex;
+            if((ProfessionTitle != "") && (Specialty != "") && (NameOfCompany != "") && (City != "") && (YearsInProfession != ""))
+            {
+                insert_practitionersProfession(personID, ProfessionTitle, Specialty, NameOfCompany, City, State, YearsInProfession, AreaOfExpertise, CurrentJob);
+                clearPractitionersProfessionArea();
+                get_practitionersProfessions();
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Please ensure all fields are selected or inputed.');", true);
+            }
+        }
+
+        protected void PractitionerProfessionClearButton_Click(object sender, EventArgs e)
+        {
+            PractitionerProfessionAddButton.Visible = true;
+            PractitionerProfessionUpdateButton.Visible = false;
+            PractitionerProfessionDeleteButton.Visible = false;
+            clearPractitionersProfessionArea();
+        }
+
+        //State Method
+
+        private int getStateIndex(string state)
+        {
+            int stateIndex = 0;
+
+            if (state.Equals("Alabama") || state.Equals("AL") || state.Equals("Al"))
+            {
+                stateIndex = 0;
+            }
+            else if (state.Equals("Alaska") || state.Equals("AK") || state.Equals("Ak"))
+            {
+                stateIndex = 1;
+            }
+            else if (state.Equals("Arizona") || state.Equals("AZ") || state.Equals("Az"))
+            {
+                stateIndex = 2;
+            }
+            else if (state.Equals("Arkansas") || state.Equals("AR") || state.Equals("Ar"))
+            {
+                stateIndex = 3;
+            }
+            else if (state.Equals("California") || state.Equals("CA") || state.Equals("Ca"))
+            {
+                stateIndex = 4;
+            }
+            else if (state.Equals("Colorado") || state.Equals("CO") || state.Equals("Co"))
+            {
+                stateIndex = 5;
+            }
+            else if (state.Equals("Connecticut") || state.Equals("CT") || state.Equals("Ct"))
+            {
+                stateIndex = 6;
+            }
+            else if (state.Equals("Delaware") || state.Equals("DE") || state.Equals("De"))
+            {
+                stateIndex = 7;
+            }
+            else if (state.Equals("District of Columbia") || state.Equals("DC") || state.Equals("Dc"))
+            {
+                stateIndex = 8;
+            }
+            else if (state.Equals("Florida") || state.Equals("FL") || state.Equals("Fl"))
+            {
+                stateIndex = 9;
+            }
+            else if (state.Equals("Georgia") || state.Equals("GA") || state.Equals("Ga"))
+            {
+                stateIndex = 10;
+            }
+            else if (state.Equals("Hawaii") || state.Equals("HI") || state.Equals("Hi"))
+            {
+                stateIndex = 11;
+            }
+            else if (state.Equals("Idaho") || state.Equals("ID") || state.Equals("Id"))
+            {
+                stateIndex = 12;
+            }
+            else if (state.Equals("Illinois") || state.Equals("IL") || state.Equals("Il"))
+            {
+                stateIndex = 13;
+            }
+            else if (state.Equals("Indiana") || state.Equals("IN") || state.Equals("In"))
+            {
+                stateIndex = 14;
+            }
+            else if (state.Equals("Iowa") || state.Equals("IA") || state.Equals("Ia"))
+            {
+                stateIndex = 15;
+            }
+            else if (state.Equals("Kansas") || state.Equals("KS") || state.Equals("Ks"))
+            {
+                stateIndex = 16;
+            }
+            else if (state.Equals("Kentucky") || state.Equals("KY") || state.Equals("Ky"))
+            {
+                stateIndex = 17;
+            }
+            else if (state.Equals("Louisiana") || state.Equals("LA") || state.Equals("La"))
+            {
+                stateIndex = 18;
+            }
+            else if (state.Equals("Maine") || state.Equals("ME") || state.Equals("Me"))
+            {
+                stateIndex = 19;
+            }
+            else if (state.Equals("Maryland") || state.Equals("MD") || state.Equals("Md"))
+            {
+                stateIndex = 20;
+            }
+            else if (state.Equals("Massachusetts") || state.Equals("MA") || state.Equals("Ma"))
+            {
+                stateIndex = 21;
+            }
+            else if (state.Equals("Michigan") || state.Equals("MI") || state.Equals("Mi"))
+            {
+                stateIndex = 22;
+            }
+            else if (state.Equals("Minnesota") || state.Equals("MN") || state.Equals("Mn"))
+            {
+                stateIndex = 23;
+            }
+            else if (state.Equals("Mississippi") || state.Equals("MS") || state.Equals("Ms"))
+            {
+                stateIndex = 24;
+            }
+            else if (state.Equals("Missouri") || state.Equals("MO") || state.Equals("Mo"))
+            {
+                stateIndex = 25;
+            }
+            else if (state.Equals("Montana") || state.Equals("MT") || state.Equals("Mt"))
+            {
+                stateIndex = 26;
+            }
+            else if (state.Equals("Nebraska") || state.Equals("NE") || state.Equals("Ne"))
+            {
+                stateIndex = 27;
+            }
+            else if (state.Equals("Nevada") || state.Equals("NV") || state.Equals("Nv"))
+            {
+                stateIndex = 28;
+            }
+            else if (state.Equals("New Hampshire") || state.Equals("NH") || state.Equals("Nh"))
+            {
+                stateIndex = 29;
+            }
+            else if (state.Equals("New Jersey") || state.Equals("NJ") || state.Equals("Nj"))
+            {
+                stateIndex = 30;
+            }
+            else if (state.Equals("New Mexico") || state.Equals("NM") || state.Equals("Nm"))
+            {
+                stateIndex = 31;
+            }
+            else if (state.Equals("New York") || state.Equals("NY") || state.Equals("Ny"))
+            {
+                stateIndex = 32;
+            }
+            else if (state.Equals("North Carolina") || state.Equals("NC") || state.Equals("Nc"))
+            {
+                stateIndex = 33;
+            }
+            else if (state.Equals("North Dakota") || state.Equals("ND") || state.Equals("Nd"))
+            {
+                stateIndex = 34;
+            }
+            else if (state.Equals("Ohio") || state.Equals("OH") || state.Equals("Oh"))
+            {
+                stateIndex = 35;
+            }
+            else if (state.Equals("Oklahoma") || state.Equals("OK") || state.Equals("Ok"))
+            {
+                stateIndex = 36;
+            }
+            else if (state.Equals("Oregon") || state.Equals("OR") || state.Equals("Or"))
+            {
+                stateIndex = 37;
+            }
+            else if (state.Equals("Pennsylvania") || state.Equals("PA") || state.Equals("Pa"))
+            {
+                stateIndex = 38;
+            }
+            else if (state.Equals("Puerto Rico") || state.Equals("PR") || state.Equals("Pr"))
+            {
+                stateIndex = 39;
+            }
+            else if (state.Equals("Rhode Island") || state.Equals("RI") || state.Equals("Ri"))
+            {
+                stateIndex = 40;
+            }
+            else if (state.Equals("South Carolina") || state.Equals("SC") || state.Equals("Sc"))
+            {
+                stateIndex = 41;
+            }
+            else if (state.Equals("South Dakota") || state.Equals("SD") || state.Equals("Sd"))
+            {
+                stateIndex = 42;
+            }
+            else if (state.Equals("Tennessee") || state.Equals("TN") || state.Equals("Tn"))
+            {
+                stateIndex = 43;
+            }
+            else if (state.Equals("Texas") || state.Equals("TX") || state.Equals("Tx"))
+            {
+                stateIndex = 44;
+            }
+            else if (state.Equals("Utah") || state.Equals("UT") || state.Equals("Ut"))
+            {
+                stateIndex = 45;
+            }
+            else if (state.Equals("Vermont") || state.Equals("VT") || state.Equals("Vt"))
+            {
+                stateIndex = 46;
+            }
+            else if (state.Equals("Virginia") || state.Equals("VA") || state.Equals("Va"))
+            {
+                stateIndex = 47;
+            }
+            else if (state.Equals("Virgin Islands") || state.Equals("VI") || state.Equals("Vi"))
+            {
+                stateIndex = 48;
+            }
+            else if (state.Equals("Washington") || state.Equals("WA") || state.Equals("Wa"))
+            {
+                stateIndex = 49;
+            }
+            else if (state.Equals("West Virginia") || state.Equals("WV") || state.Equals("Wv"))
+            {
+                stateIndex = 50;
+            }
+            else if (state.Equals("Wisconsin") || state.Equals("WI") || state.Equals("Wi"))
+            {
+                stateIndex = 51;
+            }
+            else if (state.Equals("Wyoming") || state.Equals("WY") || state.Equals("Wy"))
+            {
+                stateIndex = 52;
+            }
+
+
+            return stateIndex;
+        }
+
     }
 }
