@@ -281,17 +281,15 @@ namespace LewandowskiProject
                 con.Open();
                 using (MySqlCommand cmd = new MySqlCommand("get_practitionerInfo", con))
                 {
+                    string practitionerFirst = "", practitionerLast = "", practitionerGender = "",
+                        practitionerPhone = "", practitionerEmail = "", practitionerCity = "",
+                        practitionerState = "";
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                     int personId = 0;
                     idList = (List<int>)Session["PersonIds"];
-                    for (int i = 0; i < idList.Count; i++)
-                    {
-                        if (rowIndex == idList[i])
-                        {
-                            personId = idList[i];
-                        }
-                    }
+
+                    personId = idList[rowIndex];
 
                     //an in parameter
 
@@ -300,37 +298,45 @@ namespace LewandowskiProject
 
                     //an out parameter
 
-                    cmd.Parameters.AddWithValue("FirstName", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("FirstName", practitionerFirst);
                     cmd.Parameters["FirstName"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("LastName", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("LastName", practitionerLast);
                     cmd.Parameters["LastName"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("Gender", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("Gender", practitionerGender);
                     cmd.Parameters["Gender"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("Phone1", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("Phone1", practitionerPhone);
                     cmd.Parameters["Phone1"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("Email1", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("Email1", PractitionerEmail);
                     cmd.Parameters["Email1"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("City", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("City", practitionerCity);
                     cmd.Parameters["City"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("State", MySqlDbType.VarChar);
+                    cmd.Parameters.AddWithValue("State", practitionerState);
                     cmd.Parameters["State"].Direction = ParameterDirection.Output;
 
                     cmd.ExecuteNonQuery();
 
-                    PractitionerFirstName.Text = cmd.Parameters["FirstName"].Value.ToString();
-                    PractitionerLastName.Text = cmd.Parameters["LastName"].Value.ToString();
-                    PractitionerGender.Text = cmd.Parameters["Gender"].Value.ToString();
-                    PractitionerPhoneNumber.Text = cmd.Parameters["Phone1"].Value.ToString();
-                    PractitionerEmail.Text = cmd.Parameters["Email1"].Value.ToString();
-                    PractitionerCity.Text = cmd.Parameters["City"].Value.ToString();
-                    PractitionerState.Text = cmd.Parameters["State"].Value.ToString();
+                    practitionerFirst = cmd.Parameters["FirstName"].Value.ToString();
+                    practitionerLast = cmd.Parameters["LastName"].Value.ToString();
+                    practitionerGender = cmd.Parameters["Gender"].Value.ToString();
+                    practitionerPhone = cmd.Parameters["Phone1"].Value.ToString();
+                    practitionerEmail = cmd.Parameters["Email1"].Value.ToString();
+                    practitionerCity = cmd.Parameters["City"].Value.ToString();
+                    practitionerState = cmd.Parameters["State"].Value.ToString();
 
+
+                    PractitionerFirstName.Text = practitionerFirst;
+                    PractitionerLastName.Text = practitionerLast;
+                    PractitionerGender.Text = practitionerGender;
+                    PractitionerPhoneNumber.Text = practitionerPhone;
+                    PractitionerEmail.Text = practitionerEmail;
+                    PractitionerCity.Text = practitionerCity;
+                    PractitionerState.Text = practitionerState;
                 }
             }
         }
