@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewUserPage.aspx.cs" Inherits="LewandowskiProject.NewUserPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="jumbotron">
+        <h2>New User Registration</h2>
+    </div>
+
     <div>
-        <h1>New User Registration</h1>
         <h4>Please complete form. You will be notified by the Pre-Health Office if you are granted access.</h4>
     </div>
     <div id="wrapper">
