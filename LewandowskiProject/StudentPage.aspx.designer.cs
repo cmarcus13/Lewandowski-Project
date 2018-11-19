@@ -202,6 +202,15 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.TextBox searchTextBox;
         
         /// <summary>
+        /// cityTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cityTextBox;
+        
+        /// <summary>
         /// searchButton control.
         /// </summary>
         /// <remarks>
@@ -211,13 +220,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Button searchButton;
         
         /// <summary>
-        /// sortDropDown control.
+        /// resetButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList sortDropDown;
+        protected global::System.Web.UI.WebControls.Button resetButton;
         
         /// <summary>
         /// filter control.
@@ -236,15 +245,6 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList graduationYearDropDown;
-        
-        /// <summary>
-        /// cityDropDown control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cityDropDown;
         
         /// <summary>
         /// stateDropDown control.

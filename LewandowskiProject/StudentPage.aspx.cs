@@ -52,15 +52,14 @@ namespace LewandowskiProject
             //Add the code that gets the "logged in" person ID from the state.
             if (!IsPostBack)
             {
-                personID = 2;
                 get_studentInfo();
                 update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
-                BindListView();
+                BindGridView();
                 Session["PersonIds"] = idList;
             }
         }
 
-        public void BindListView()
+        public void BindGridView()
         {
             MySqlConnection con = new MySqlConnection(dbConnectionString);
             DataTable dt = new DataTable();
@@ -69,7 +68,6 @@ namespace LewandowskiProject
             MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
             myAdapter.Fill(dt);
             PractitionerGridView.DataSource = dt;
-
             PractitionerGridView.DataBind();
 
             cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people where  people.userType = 'practitioner'", con);
@@ -85,6 +83,7 @@ namespace LewandowskiProject
                 }
             }
             con.Close();
+            Session["PersonIds"] = idList;
         }
 
         protected void ClientButton_Click(object sender, EventArgs e)
@@ -471,6 +470,161 @@ namespace LewandowskiProject
 
                 }
             }
+        }
+
+        protected void stateDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name',contacts.Email1 as 'Email'," +
+                " contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' " +
+                "and people.State = '" + stateDropDown.SelectedValue + "'", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people where  people.userType = 'practitioner' and people.State = " +
+                "'" + stateDropDown.SelectedValue + "'", con);
+            using (var command = new MySqlCommand(cmd.CommandText, con))
+            {
+                con.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    var list = new List<int>();
+                    while (reader.Read())
+                        list.Add(personID = reader.GetInt32(0));
+                    idList = list;
+                }
+            }
+            con.Close();
+            Session["PersonIds"] = idList;
+        }
+
+        protected void resetButton_Click(object sender, EventArgs e)
+        {
+            BindGridView();
+            professionDropDown.SelectedIndex = 0;
+            cityTextBox.Text = "";
+            graduationYearDropDown.SelectedIndex = 0;
+            stateDropDown.SelectedIndex = 0;
+            searchTextBox.Text = "";
+        }
+
+        protected void professionDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name',contacts.Email1 as 'Email'," +
+                " contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' " +
+                "and people.Title = '" + professionDropDown.SelectedValue + "'", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people where  people.userType = 'practitioner' and people.Title = " +
+                "'" + professionDropDown.SelectedValue + "'", con);
+            using (var command = new MySqlCommand(cmd.CommandText, con))
+            {
+                con.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    var list = new List<int>();
+                    while (reader.Read())
+                        list.Add(personID = reader.GetInt32(0));
+                    idList = list;
+                }
+            }
+            con.Close();
+            Session["PersonIds"] = idList;
+        }
+
+        protected void graduationYearDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name',contacts.Email1 as 'Email'," +
+                " contacts.Phone1 as 'Phone' From people, contacts, educations Where people.personId = contacts.personId and people.personID = educations.personID " +
+                "and people.userType = 'practitioner' and educations.GraduationYear = '" + graduationYearDropDown.SelectedValue + "'", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people, educations where people.userType = " +
+                "'practitioner' and people.personID = educations.personID and educations.GraduationYear = '" + graduationYearDropDown.SelectedValue + "'", con);
+            using (var command = new MySqlCommand(cmd.CommandText, con))
+            {
+                con.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    var list = new List<int>();
+                    while (reader.Read())
+                        list.Add(personID = reader.GetInt32(0));
+                    idList = list;
+                }
+            }
+            con.Close();
+            Session["PersonIds"] = idList;
+        }
+
+        protected void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name',contacts.Email1 as 'Email'," +
+                " contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' " +
+                "and (people.LastName = '" + searchTextBox.Text + "' or people.FirstName = '" + searchTextBox.Text + "')", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people where people.userType = 'practitioner' and (people.LastName " +
+                "= '" + searchTextBox.Text + "' or people.FirstName = '" + searchTextBox.Text + "')", con);
+            using (var command = new MySqlCommand(cmd.CommandText, con))
+            {
+                con.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    var list = new List<int>();
+                    while (reader.Read())
+                        list.Add(personID = reader.GetInt32(0));
+                    idList = list;
+                }
+            }
+            con.Close();
+            Session["PersonIds"] = idList;
+        }
+
+        protected void cityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(dbConnectionString);
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("Select people.FirstName as 'First Name', people.LastName as 'Last Name',contacts.Email1 as 'Email'," +
+                " contacts.Phone1 as 'Phone' From people, contacts Where people.personId = contacts.personId and people.userType = 'practitioner' " +
+                "and people.City = '" + cityTextBox.Text + "'", con);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
+            myAdapter.Fill(dt);
+            PractitionerGridView.DataSource = dt;
+            PractitionerGridView.DataBind();
+
+            cmd = new MySqlCommand("Select people.PersonID as 'Person ID' from people where people.userType = 'practitioner' and people.City = " +
+                "'" + cityTextBox.Text + "'", con);
+            using (var command = new MySqlCommand(cmd.CommandText, con))
+            {
+                con.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    var list = new List<int>();
+                    while (reader.Read())
+                        list.Add(personID = reader.GetInt32(0));
+                    idList = list;
+                }
+            }
+            con.Close();
+            Session["PersonIds"] = idList;
         }
 
         protected void PractitionerGridView_SelectedIndexChanged(object sender, EventArgs e)

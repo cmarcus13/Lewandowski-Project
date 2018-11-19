@@ -74,55 +74,107 @@
 
     <%--<input id="PractitionerFirstNameInput" type="text" />--%>
     <div style="padding:10px" class="SizeOfText">
-        <h3>Explore Alumni  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="1000px" runat="server"></asp:TextBox>
-        <asp:Button ID="searchButton" runat="server" Text="Go" />
-        <asp:DropDownList ID="sortDropDown" runat="server" style="margin:5px">
-            <asp:ListItem>Sort by</asp:ListItem>
-            <asp:ListItem>Name</asp:ListItem>
-            <asp:ListItem>Graduation</asp:ListItem>
-            <asp:ListItem>City</asp:ListItem>
-            <asp:ListItem>State</asp:ListItem>
-            <asp:ListItem>Profession</asp:ListItem>
-        </asp:DropDownList></h3>
+        <h3>
+            Explore Alumni  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="800px" runat="server" OnTextChanged="searchTextBox_TextChanged"></asp:TextBox>
+            <br /> <br />
+            Search by City  <asp:TextBox ID="cityTextBox" runat="server" width="500px" placeholder="Search City" OnTextChanged="cityTextBox_TextChanged"></asp:TextBox>
+        </h3>
+        <h3>
+        <asp:Button ID="searchButton" runat="server" Text="Go" Height="28px" />
+        &nbsp;<asp:Button ID="resetButton" runat="server" Text="Reset List" OnClick="resetButton_Click" Height="29px" />
+        </h3>
         <section style="display:flex; margin-top:5px">
         <div style="margin:5px,5px,5px,0; flex:1; background-color:#EAEAEA" class="SizeOfText">
             <asp:Label ID="filter" runat="server" Text="filter" style="margin:5px">Filter</asp:Label>
             <br /> 
-            <asp:DropDownList ID="graduationYearDropDown" runat="server" style="margin:5px">
+            <asp:DropDownList ID="graduationYearDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="graduationYearDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select Graduation Year</asp:ListItem>
-                <asp:ListItem>2015-2017</asp:ListItem>
-                <asp:ListItem>2010-2014</asp:ListItem>
-                <asp:ListItem>2005-2009</asp:ListItem>
-                <asp:ListItem>2000-2004</asp:ListItem>
-                <asp:ListItem>1995-1999</asp:ListItem>
-                <asp:ListItem>1990-1994</asp:ListItem>
-                <asp:ListItem>1985-1989</asp:ListItem>
-                <asp:ListItem>1980-1984</asp:ListItem>
-                <asp:ListItem>1975-1979</asp:ListItem>
-                <asp:ListItem>1970-1974</asp:ListItem>
-                <asp:ListItem>1965-1969</asp:ListItem>
-                <asp:ListItem>1960-1964</asp:ListItem>        
+                <asp:ListItem>2017</asp:ListItem>
+                <asp:ListItem>2016</asp:ListItem>
+                <asp:ListItem>2015</asp:ListItem>
+                <asp:ListItem>2014</asp:ListItem>
+                <asp:ListItem>2013</asp:ListItem>
+                <asp:ListItem>2012</asp:ListItem>
+                <asp:ListItem>2011</asp:ListItem>
+                <asp:ListItem>2010</asp:ListItem>
+                <asp:ListItem>2009</asp:ListItem>
+                <asp:ListItem>2008</asp:ListItem>
+                <asp:ListItem>2007</asp:ListItem>
+                <asp:ListItem>2006</asp:ListItem>
+                <asp:ListItem>2005</asp:ListItem>
+                <asp:ListItem>2004</asp:ListItem>
+                <asp:ListItem>2003</asp:ListItem>
+                <asp:ListItem>2002</asp:ListItem>
+                <asp:ListItem>2001</asp:ListItem>
+                <asp:ListItem>2000</asp:ListItem>
+                <asp:ListItem>1999</asp:ListItem>
+                <asp:ListItem>1994</asp:ListItem>
+                <asp:ListItem>1989</asp:ListItem>
+                <asp:ListItem>1984</asp:ListItem>
+                <asp:ListItem>1979</asp:ListItem>
+                <asp:ListItem>1974</asp:ListItem>
+                <asp:ListItem>1969</asp:ListItem>
+                <asp:ListItem>1964</asp:ListItem>        
             </asp:DropDownList>
             <br />
-            <asp:DropDownList ID="cityDropDown" runat="server" style="margin:5px">
-                <asp:ListItem>Select City</asp:ListItem>
-                <asp:ListItem>Buffalo</asp:ListItem>
-                <asp:ListItem>Chicago</asp:ListItem>
-                <asp:ListItem>Cleveland</asp:ListItem>
-                <asp:ListItem>Columbus</asp:ListItem>
-                <asp:ListItem>Detroit</asp:ListItem>
-                <asp:ListItem>Rochester</asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            <asp:DropDownList ID="stateDropDown" runat="server" style="margin:5px">
+            <asp:DropDownList ID="stateDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="stateDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select State</asp:ListItem>
-                <asp:ListItem>IL</asp:ListItem>
-                <asp:ListItem>MI</asp:ListItem>
-                <asp:ListItem>NY</asp:ListItem>
-                <asp:ListItem>OH</asp:ListItem>
+               <asp:ListItem>Alabama</asp:ListItem>
+                     <asp:ListItem>Alaska</asp:ListItem>
+                     <asp:ListItem>Arizona</asp:ListItem>
+                     <asp:ListItem>Arkansas</asp:ListItem>
+                     <asp:ListItem>California</asp:ListItem>
+                     <asp:ListItem>Colorado</asp:ListItem>
+                     <asp:ListItem>Connecticut</asp:ListItem>
+                     <asp:ListItem>Delaware</asp:ListItem>
+                     <asp:ListItem>District of Columbia</asp:ListItem>
+                     <asp:ListItem>Florida</asp:ListItem>
+                     <asp:ListItem>Georgia</asp:ListItem>
+                     <asp:ListItem>Hawaii</asp:ListItem>
+                     <asp:ListItem>Idaho</asp:ListItem>
+                     <asp:ListItem>Illinois</asp:ListItem>
+                     <asp:ListItem>Indiana</asp:ListItem>
+                     <asp:ListItem>Iowa</asp:ListItem>
+                     <asp:ListItem>Kansas</asp:ListItem>
+                     <asp:ListItem>Kentucky</asp:ListItem>
+                     <asp:ListItem>Louisiana</asp:ListItem>
+                     <asp:ListItem>Maine</asp:ListItem>
+                     <asp:ListItem>Maryland</asp:ListItem>
+                     <asp:ListItem>Massachusetts</asp:ListItem>
+                     <asp:ListItem>Michigan</asp:ListItem>
+                     <asp:ListItem>Minnesota</asp:ListItem>
+                     <asp:ListItem>Mississippi</asp:ListItem>
+                     <asp:ListItem>Missouri</asp:ListItem>
+                     <asp:ListItem>Montana</asp:ListItem>
+                     <asp:ListItem>Nebraska</asp:ListItem>
+                     <asp:ListItem>Nevada</asp:ListItem>
+                     <asp:ListItem>New Hampshire</asp:ListItem>
+                     <asp:ListItem>New Jersey</asp:ListItem>
+                     <asp:ListItem>New Mexico</asp:ListItem>
+                     <asp:ListItem>New York</asp:ListItem>
+                     <asp:ListItem>North Carolina</asp:ListItem>
+                     <asp:ListItem>North Dakota</asp:ListItem>
+                     <asp:ListItem>Ohio</asp:ListItem>
+                     <asp:ListItem>Oklahoma</asp:ListItem>
+                     <asp:ListItem>Oregon</asp:ListItem>
+                     <asp:ListItem>Pennsylvania</asp:ListItem>
+                     <asp:ListItem>Puerto Rico</asp:ListItem>
+                     <asp:ListItem>Rhode Island</asp:ListItem>
+                     <asp:ListItem>South Carolina</asp:ListItem>
+                     <asp:ListItem>South Dakota</asp:ListItem>
+                     <asp:ListItem>Tennessee</asp:ListItem>
+                     <asp:ListItem>Texas</asp:ListItem>
+                     <asp:ListItem>Utah</asp:ListItem>
+                     <asp:ListItem>Vermont</asp:ListItem>
+                     <asp:ListItem>Virginia</asp:ListItem>
+                     <asp:ListItem>Virgin Islands</asp:ListItem>
+                     <asp:ListItem>Washington</asp:ListItem>
+                     <asp:ListItem>West Virginia</asp:ListItem>
+                     <asp:ListItem>Wisconsin</asp:ListItem>
+                     <asp:ListItem>Wyoming</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:DropDownList ID="professionDropDown" runat="server" style="margin:5px">
+            <asp:DropDownList ID="professionDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="professionDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select Profession</asp:ListItem>
                 <asp:ListItem>Dentist</asp:ListItem>
                 <asp:ListItem>Pharmacist</asp:ListItem>
