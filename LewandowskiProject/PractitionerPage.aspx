@@ -35,58 +35,8 @@
             </p> 
              <p>
                  <asp:Label ID="PractitionerCityLabel" runat="server">City: <br /></asp:Label>
-                 <asp:TextBox ID="PractitionerCity" runat="server"></asp:TextBox>
-                 <%--<h2>Education:</h2>
-            <p><b>Undergrad School:</b><br /></p>
-            <p>School Name: <br />
-                <input id="UndergradName" type="text" />
-            </p>
-            <p>Graduation Year: <br />
-                <input id="UnderGradYear" type="text" />
-            </p>
-            <p> Degree Earned:<br />
-                <asp:DropDownList ID="UndergradDegreeEarnedDropDownList" runat="server">
-                    <asp:ListItem>Associates</asp:ListItem>
-                    <asp:ListItem>Bachelors</asp:ListItem>
-                </asp:DropDownList>
-            </p>
-            <p> Degree Earned in: <br />
-                <input id="UndergradDegreeEarnedIn" type="text" />
-            </p>
-
-            <p><b>Graduate School:</b><br /></p>
-            <p>School Name: <br />
-                <input id="GradSchoolName" type="text" />
-            </p>
-            <p>Graduation Year: <br />
-                <input id="GradSchoolGradYear" type="text" />
-            </p>
-            <p> Degree Earned:<br />
-                <asp:DropDownList ID="GradSchoolDropDownList" runat="server">
-                    <asp:ListItem>Associates</asp:ListItem>
-                    <asp:ListItem>Bachelors</asp:ListItem>
-                    <asp:ListItem>Masters</asp:ListItem>
-                    <asp:ListItem>Doctorate</asp:ListItem>
-                </asp:DropDownList>
-            </p>
-
-            <p><b>Medical School:</b><br /></p>
-            <p>School Name:<br />
-                <input id="MedSchool" type="text" />
-            </p>
-            <p>Graduation Year: <br />
-                <input id="MedSchoolGradYear" type="text" />
-            </p>
-            <p> Degree Earned:<br />
-                <asp:DropDownList ID="MedSchoolDropDownList" runat="server">
-                    <asp:ListItem>Associates</asp:ListItem>
-                    <asp:ListItem>Bachelors</asp:ListItem>
-                    <asp:ListItem>Masters</asp:ListItem>
-                    <asp:ListItem>Doctorate</asp:ListItem>
-                </asp:DropDownList>
-            </p>--%>
-            </p> 
-             <p>
+                 <asp:TextBox ID="PractitionerCity" runat="server"></asp:TextBox>                
+                 <br />
                  <asp:Label ID="PractitionerPersonalInformationStateDropDownListLabel" runat="server">State: <br /></asp:Label>
                  <asp:DropDownList ID="PractitionerPersonalInformationStateDropDownList" runat="server">
                      <asp:ListItem>Alabama</asp:ListItem>
@@ -143,11 +93,16 @@
                      <asp:ListItem>Wisconsin</asp:ListItem>
                      <asp:ListItem>Wyoming</asp:ListItem>
                  </asp:DropDownList>
-            </p>
-            <asp:Button ID="PractitionerPersonalInfoSaveButton" runat="server" Text="save" OnClick="PractitionerPersonalInfoSaveButton_Click"/>
-        <%--<input id="PractitionerEducationSchoolNameText" type="text" />--%>
+            <br />
+            <br />
+            <asp:Label ID="AcceptingStudentsLabel" runat="server">Currently Accepting Students:</asp:Label>
+                 <asp:RadioButtonList ID="AcceptingStudentsRadioButton" runat="server">
+                     <asp:ListItem>Yes</asp:ListItem>
+                     <asp:ListItem>No</asp:ListItem>
+                 </asp:RadioButtonList>
 
-        <%--<input id="PractitionerEducationGradYearText" type="text" placeholder="ex: yyyy" />--%>
+            <asp:Button ID="PractitionerPersonalInfoSaveButton" runat="server" Text="save" OnClick="PractitionerPersonalInfoSaveButton_Click"/>
+       
     <h2>Education:</h2>
             <p>
                 <asp:DropDownList ID="PractitionerAddEducationDropDownList" runat="server" Height="20px" Width="218px" OnSelectedIndexChanged="PractitionerAddEducationDropDownList_SelectedIndexChanged" AutoPostBack ="true"/>

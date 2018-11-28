@@ -16,7 +16,7 @@
             padding-top: 10px;
             padding-left:10px;
             width: 400px;
-            height: 500px;
+            height: 600px;
         }
         .SizeOfText{
             font-size: 110%;
@@ -30,14 +30,14 @@
      <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="AjaxFunctionalityEater"
         PopupControlID="ModalPanel" BackgroundCssClass="Background" />
 
+    <h4>Please review the pending users below.</h4>
+     <br /> <br />
      <asp:GridView ID="NewUsersGridView" runat="server" Width="900px" Height="70px" 
                     HorizontalAlign="Center" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="10" CellSpacing="3" OnSelectedIndexChanged="newUsersGridView_SelectedIndexChanged">
                     <Columns>
                         <asp:TemplateField >
                             <ItemTemplate>
                                 <asp:Button ID="btnViewUserProfile" runat="server" Text="View More" OnClick="BtnViewUserProfile_Click" />
-                                <asp:Button ID="acceptUser" runat="server" Text="Accept" />
-                                <asp:Button ID="denyUser" runat="server" Text="Deny" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>           
@@ -57,7 +57,7 @@
         PopupControlID="ModalPanel" BackgroundCssClass="Background" />
     <asp:Panel ID="ModalPanel" runat="server" Width="500px" CssClass="ProfilePopup">
         <h3>View Information</h3>
-       
+        <asp:HiddenField ID="userIdHiddenField" runat="server" />
         <asp:Label ID="Label1" runat="server" Text="User Type: " Font-Bold="true"></asp:Label>
         <asp:Label ID="UserTypeLabel" runat="server" Text=""></asp:Label>
         <br /><br />
@@ -90,6 +90,10 @@
         <br /><br />
         <asp:Label ID="Label11" runat="server" Text="Password: " Font-Bold="true"></asp:Label>
         <asp:Label ID="PasswordLabel" runat="server" Text=""></asp:Label>
+        <br /><br />
+        <asp:Button ID="acceptUser" runat="server" Text="Accept" OnClick="acceptUser_Click" />
+        <br />
+        <asp:Button ID="denyUser" runat="server" Text="Deny" OnClick="denyUser_Click" />
         <br /><br />
         <asp:Button ID="CloseButton" runat="server" Text="Close" OnClick="CloseButton_Click" />
         <br /><br />

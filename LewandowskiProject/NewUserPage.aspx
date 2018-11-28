@@ -33,7 +33,7 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="suffixTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The suffix field is required." />
             <br />
-            <asp:Label ID="titleLabel" runat="server" Text="Label: "></asp:Label>
+            <asp:Label ID="titleLabel" runat="server" Text="Title: "></asp:Label>
             <asp:TextBox ID="titleTextBox" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="titleTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The title field is required." />
@@ -125,12 +125,12 @@
                         CssClass="text-danger" ErrorMessage="The email field is required." />
             <br />
             <asp:Label ID="passwordLabel" runat="server" Text="Password: "></asp:Label>
-            <asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="passwordTextBox"
                        CssClass="text-danger" ErrorMessage="The password field is required." />
             <br />
             <asp:Label ID="passwordConfirmLabel" runat="server" Text="Confirm Password: "></asp:Label>
-            <asp:TextBox ID="confirmPasswordTextBox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="confirmPasswordTextBox"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
                     <asp:CompareValidator runat="server" ControlToCompare="passwordTextBox" ControlToValidate="confirmPasswordTextBox"

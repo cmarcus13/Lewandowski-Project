@@ -139,6 +139,24 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.DropDownList PractitionerPersonalInformationStateDropDownList;
         
         /// <summary>
+        /// AcceptingStudentsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AcceptingStudentsLabel;
+        
+        /// <summary>
+        /// AcceptingStudentsRadioButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList AcceptingStudentsRadioButton;
+        
+        /// <summary>
         /// PractitionerPersonalInfoSaveButton control.
         /// </summary>
         /// <remarks>

@@ -23,10 +23,6 @@ namespace LewandowskiProject
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            string temp = User.Identity.GetUserId();
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('user id "+temp+"');", true);
-
-
             string UserType = userTypeRadioButtonList.SelectedItem.ToString();
             string FirstName = firstNameTextBox.Text;
             string LastName = lastNameTextBox.Text;
@@ -41,8 +37,7 @@ namespace LewandowskiProject
 
             insert_newuser(UserType,FirstName,LastName,Suffix,Title,Bio,City,State,Gender,Email,userPassword);
             clearForm();
-            
-           
+       
         }
 
         private void insert_newuser(string UserType, string FirstName, string LastName, string Suffix, string Title, string Bio, string City, string State, string Gender, string Email, string userPassword)
@@ -106,6 +101,7 @@ namespace LewandowskiProject
             stateDropDownList.SelectedIndex = 0;
             genderRadioButtonList.SelectedIndex = 0;
             emailTextBox.Text = "";
+            passwordTextBox.Text = "";
             confirmPasswordTextBox.Text = "";
         }
 

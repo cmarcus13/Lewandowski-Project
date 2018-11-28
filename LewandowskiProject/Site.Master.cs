@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
@@ -12,6 +14,10 @@ namespace LewandowskiProject
 {
     public partial class SiteMaster : MasterPage
     {
+
+        private string dbConnectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
+        
+
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -69,8 +75,56 @@ namespace LewandowskiProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+                Session["PersonID"] = Context.User.Identity.GetUserId();
 
+                StudentPage.Visible = false;
+                PractitionerPage.Visible = false;
+                AdminPage.Visible = false;
+
+                if (Context.User.Identity.GetUserId() != "")
+                {
+                    string userType = get_userType(Context.User.Identity.GetUserId());
+                    if (userType == "Admin")
+                    {
+                        AdminPage.Visible = true;
+                    }
+                    else if (userType == "Student")
+                    {
+                        StudentPage.Visible = true;
+                    }
+                    else if (userType == "Practitioner")
+                    {
+                        PractitionerPage.Visible = true;
+                    }
+                }
         }
+
+        private string get_userType(string PersonId)
+        {
+            string UserType = "";
+
+            using (MySqlConnection con = new MySqlConnection(dbConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand("get_userType", con))
+                {
+
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("PersonId", PersonId);
+                    cmd.Parameters["PersonId"].Direction = System.Data.ParameterDirection.Input;
+
+                    cmd.Parameters.AddWithValue("UserType", UserType);
+                    cmd.Parameters["UserType"].Direction = System.Data.ParameterDirection.Output;
+
+                    cmd.ExecuteScalar();
+
+                    UserType = cmd.Parameters["UserType"].Value.ToString();
+                }
+            }
+            return UserType;
+        }
+
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {

@@ -16,12 +16,13 @@ namespace LewandowskiProject
         private string dbConnectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
         //Add the code that gets the "logged in" person ID from the state.
         //Temporarly set the person ID to 4 for testing purposes.
-        private int personID = 4;
+        private string personID = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                personID = Session["PersonId"].ToString();
                 get_practitionerInfo();
                 get_practitionersEducations();
                 get_practitionersProfessionalHealthExperiences();
@@ -42,6 +43,7 @@ namespace LewandowskiProject
                 string email1 = "";
                 string city = "";
                 string state = "";
+                int acceptsStudents = 0;
 
                 con.Open();
                 using (MySqlCommand cmd = new MySqlCommand("get_practitionerInfo", con))
@@ -76,6 +78,9 @@ namespace LewandowskiProject
                     cmd.Parameters.AddWithValue("State", state);
                     cmd.Parameters["State"].Direction = ParameterDirection.Output;
 
+                    cmd.Parameters.AddWithValue("AcceptsStudents", acceptsStudents);
+                    cmd.Parameters["AcceptsStudents"].Direction = ParameterDirection.Output;
+
                     cmd.ExecuteNonQuery();
 
                     //Assigning the Parameters to the Local Variables
@@ -86,7 +91,14 @@ namespace LewandowskiProject
                     email1 = cmd.Parameters["Email1"].Value.ToString();
                     city = cmd.Parameters["City"].Value.ToString();
                     state = cmd.Parameters["State"].Value.ToString();
-
+                    try
+                    {
+                        acceptsStudents = Convert.ToInt16(cmd.Parameters["AcceptsStudents"].Value);
+                    }
+                    catch
+                    {
+                        acceptsStudents = -1;
+                    }
                     //Assigning the Fields Text or Index to the Local Variables
 
                     PractitionerFirstName.Text = firstName;//FirstName Textbox
@@ -108,6 +120,19 @@ namespace LewandowskiProject
                     //Logic For Which State Will Be Selected
 
                     PractitionerPersonalInformationStateDropDownList.SelectedIndex = getStateIndex(state);
+
+                    if (acceptsStudents == 0)
+                    {
+                        AcceptingStudentsRadioButton.SelectedIndex = 0;
+                    }
+                    else if (acceptsStudents == 1)
+                    {
+                        AcceptingStudentsRadioButton.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        AcceptingStudentsRadioButton.SelectedIndex = -1;
+                    }
                 }
             }
         }
@@ -116,7 +141,7 @@ namespace LewandowskiProject
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
-   
+
                 //These are the Local Variables Stored Proc
                 string InstitutionName = "";
                 string EducationId = "";
@@ -149,7 +174,7 @@ namespace LewandowskiProject
                             PractitionerAddEducationDropDownList.Items.Add(new ListItem(InstitutionName, EducationId));
                         }
                         get_practitionersEducation(Convert.ToInt16(PractitionerAddEducationDropDownList.Items[0].Value));
-                    } 
+                    }
                     else
                     {
                         PractitionerAddEducationDropDownList.Visible = false;
@@ -233,7 +258,7 @@ namespace LewandowskiProject
                     {
                         PractitionerEducationDegreeEarnedDropDownList.SelectedIndex = 1;
                     }
-                    else if (DegreeEarned.Equals("Masters")) 
+                    else if (DegreeEarned.Equals("Masters"))
                     {
                         PractitionerEducationDegreeEarnedDropDownList.SelectedIndex = 2;
                     }
@@ -288,7 +313,7 @@ namespace LewandowskiProject
                             InstituteName = myReader["InstituteName"].ToString();
                             PositionTitle = myReader["PositionTitle"].ToString();
                             ProfessionalHealthExperienceId = myReader["ProfessionalHealthExperienceId"].ToString();
-                            PractitionerAddInternshipsDropDownList.Items.Add(new ListItem(InstituteName + " - " + PositionTitle , ProfessionalHealthExperienceId));
+                            PractitionerAddInternshipsDropDownList.Items.Add(new ListItem(InstituteName + " - " + PositionTitle, ProfessionalHealthExperienceId));
                         }
                         get_practitionersProfessionalHealthExperience(Convert.ToInt16(PractitionerAddInternshipsDropDownList.Items[0].Value));
                     }
@@ -378,29 +403,29 @@ namespace LewandowskiProject
                     currentJob = Convert.ToInt16(cmd.Parameters["CurrentJob"].Value);
 
                     //Assigning the Fields Text or Index to the Local Variables
-                    if(professionalHealthExperienceType.Equals("Internship"))
+                    if (professionalHealthExperienceType.Equals("Internship"))
                     {
                         PractitionerInternshipsDropDownList.SelectedIndex = 0;
                     }
-                    else if(professionalHealthExperienceType.Equals("Residency"))
+                    else if (professionalHealthExperienceType.Equals("Residency"))
                     {
                         PractitionerInternshipsDropDownList.SelectedIndex = 1;
                     }
-                    else if(professionalHealthExperienceType.Equals("Fellowship"))
+                    else if (professionalHealthExperienceType.Equals("Fellowship"))
                     {
                         PractitionerInternshipsDropDownList.SelectedIndex = 2;
                     }
 
 
-                    if(areaOfExpertise.Equals("Dentistry"))
+                    if (areaOfExpertise.Equals("Dentistry"))
                     {
                         PractitionerInternshipsAreaDropDownList.SelectedIndex = 0;
                     }
-                    else if(areaOfExpertise.Equals("Surgery"))
+                    else if (areaOfExpertise.Equals("Surgery"))
                     {
                         PractitionerInternshipsAreaDropDownList.SelectedIndex = 1;
                     }
-                    else if(areaOfExpertise.Equals("Other"))
+                    else if (areaOfExpertise.Equals("Other"))
                     {
                         PractitionerInternshipsAreaDropDownList.SelectedIndex = 2;
                     }
@@ -638,7 +663,7 @@ namespace LewandowskiProject
         }
 
         //Update Store Procedures
-        private void update_practitionerInfo(int PersonId,string FirstName,string LastName,string Gender,string City,string State,string Phone1,string Email)
+        private void update_practitionerInfo(string PersonId, string FirstName, string LastName, string Gender, string City, string State, string Phone1, string Email, int AcceptsStudents)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -673,6 +698,9 @@ namespace LewandowskiProject
                     cmd.Parameters.AddWithValue("Email", Email);
                     cmd.Parameters["Email"].Direction = ParameterDirection.Input;
 
+                    cmd.Parameters.AddWithValue("AcceptsStudents", AcceptsStudents);
+                    cmd.Parameters["AcceptsStudents"].Direction = ParameterDirection.Input;
+
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -680,10 +708,10 @@ namespace LewandowskiProject
 
         protected void PractitionerPersonalInfoSaveButton_Click(object sender, EventArgs e)
         {
-            update_practitionerInfo(personID, PractitionerFirstName.Text, PractitionerLastName.Text, PractitionerGenderRadioButtonList.SelectedItem.ToString(), PractitionerCity.Text, PractitionerPersonalInformationStateDropDownList.SelectedItem.ToString(), PractitionerPhoneNumber.Text, PractitionerEmail.Text);
+            update_practitionerInfo(personID, PractitionerFirstName.Text, PractitionerLastName.Text, PractitionerGenderRadioButtonList.SelectedItem.ToString(), PractitionerCity.Text, PractitionerPersonalInformationStateDropDownList.SelectedItem.ToString(), PractitionerPhoneNumber.Text, PractitionerEmail.Text, AcceptingStudentsRadioButton.SelectedIndex);
         }
 
-        private void update_practitionerEducation(int EducationId,string InstitutionName,string YearInSchool,string GraduationYear,string DegreeEarned,string Major,string Minor)
+        private void update_practitionerEducation(int EducationId, string InstitutionName, string YearInSchool, string GraduationYear, string DegreeEarned, string Major, string Minor)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -722,11 +750,11 @@ namespace LewandowskiProject
 
         protected void PractitionerEducationUpdateButton_Click(object sender, EventArgs e)
         {
-            update_practitionerEducation(Convert.ToInt16(PractitionerAddEducationDropDownList.SelectedValue),PractitionerEducationSchoolNameText.Text,PractitionerEducationYearInText.Text,PractitionerEducationGradYearText.Text,PractitionerEducationDegreeEarnedDropDownList.SelectedItem.ToString(),PractitionerEducationMajorText.Text,PractitionerEducationMinorText.Text);
+            update_practitionerEducation(Convert.ToInt16(PractitionerAddEducationDropDownList.SelectedValue), PractitionerEducationSchoolNameText.Text, PractitionerEducationYearInText.Text, PractitionerEducationGradYearText.Text, PractitionerEducationDegreeEarnedDropDownList.SelectedItem.ToString(), PractitionerEducationMajorText.Text, PractitionerEducationMinorText.Text);
             get_practitionersEducations();
         }
 
-        private void update_practitionersProfessionalHealthExperience(int ProfessionalHealthExperienceId,string ProfessionalHealthExperienceType,string InstituteName,string City,string State,string AreaOfExpertise,string PositionTitle,string Description,int CurrentJob)
+        private void update_practitionersProfessionalHealthExperience(int ProfessionalHealthExperienceId, string ProfessionalHealthExperienceType, string InstituteName, string City, string State, string AreaOfExpertise, string PositionTitle, string Description, int CurrentJob)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -782,11 +810,11 @@ namespace LewandowskiProject
                 CurrentJob = 1;
             }
 
-            update_practitionersProfessionalHealthExperience(Convert.ToInt16(PractitionerAddInternshipsDropDownList.SelectedValue), PractitionerInternshipsDropDownList.SelectedItem.ToString(), PractitionerInternshipsInstituteNameText.Text, PractitionerInternshipsInstituteCity.Text,PractitionerInternshipsInstituteStateDropDownList.SelectedItem.ToString(),PractitionerInternshipsAreaDropDownList.SelectedItem.ToString(),PractitionerInternshipNameOrTitle.Text, PractitionerInternshipsTextArea.Text, CurrentJob);
+            update_practitionersProfessionalHealthExperience(Convert.ToInt16(PractitionerAddInternshipsDropDownList.SelectedValue), PractitionerInternshipsDropDownList.SelectedItem.ToString(), PractitionerInternshipsInstituteNameText.Text, PractitionerInternshipsInstituteCity.Text, PractitionerInternshipsInstituteStateDropDownList.SelectedItem.ToString(), PractitionerInternshipsAreaDropDownList.SelectedItem.ToString(), PractitionerInternshipNameOrTitle.Text, PractitionerInternshipsTextArea.Text, CurrentJob);
             get_practitionersProfessionalHealthExperiences();
         }
 
-        private void update_practitionerProfession(int ProfessionId,string ProfessionTitle,string Specialty,string NameOfCompany,string City,string State,string YearsInProfession,string AreaOfExpertise,int CurrentJob)
+        private void update_practitionerProfession(int ProfessionId, string ProfessionTitle, string Specialty, string NameOfCompany, string City, string State, string YearsInProfession, string AreaOfExpertise, int CurrentJob)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -842,11 +870,11 @@ namespace LewandowskiProject
                 CurrentJob = 1;
             }
 
-            update_practitionerProfession(Convert.ToInt16(PractitionerAddPrfessionDropDownList.SelectedValue),PractitionerProfessionNameOrTitle.Text,PractitionerProfessionSpecialty.Text,PractitionerProfessionLocationText.Text,PractitionerProfessionCity.Text,PractitionerProfessionStateDropDownList.SelectedItem.ToString(),PractitionerYearsInLabelText.Text,PractitionerProfessionDropDownList.SelectedItem.ToString(),CurrentJob);
+            update_practitionerProfession(Convert.ToInt16(PractitionerAddPrfessionDropDownList.SelectedValue), PractitionerProfessionNameOrTitle.Text, PractitionerProfessionSpecialty.Text, PractitionerProfessionLocationText.Text, PractitionerProfessionCity.Text, PractitionerProfessionStateDropDownList.SelectedItem.ToString(), PractitionerYearsInLabelText.Text, PractitionerProfessionDropDownList.SelectedItem.ToString(), CurrentJob);
             get_practitionersProfessions();
         }
 
-        private void update_practitionerBio(int personId,string Bio)
+        private void update_practitionerBio(string personId, string Bio)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -870,7 +898,7 @@ namespace LewandowskiProject
 
         protected void PractitionerBioButton_Click(object sender, EventArgs e)
         {
-            update_practitionerBio(personID,BioTextArea.Text);
+            update_practitionerBio(personID, BioTextArea.Text);
         }
 
 
@@ -992,7 +1020,7 @@ namespace LewandowskiProject
 
         //insert methods
 
-        private void insert_practitionersEducation(int PersonId,string InstitutionName,string YearInSchool,string GraduationYear,string DegreeEarned,string Major,string Minor)
+        private void insert_practitionersEducation(string PersonId, string InstitutionName, string YearInSchool, string GraduationYear, string DegreeEarned, string Major, string Minor)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -1037,9 +1065,9 @@ namespace LewandowskiProject
             string DegreeEarned = PractitionerEducationDegreeEarnedDropDownList.SelectedItem.ToString();
             string Major = PractitionerEducationMajorText.Text;
             string Minor = PractitionerEducationMinorText.Text;
-            if((InstitutionName != "") && (YearInSchool != "") &&(GraduationYear != "") && (DegreeEarned != "") && (Major != "") && (Minor != ""))
+            if ((InstitutionName != "") && (YearInSchool != "") && (GraduationYear != "") && (DegreeEarned != "") && (Major != "") && (Minor != ""))
             {
-                insert_practitionersEducation(personID,InstitutionName,YearInSchool,GraduationYear,DegreeEarned,Major,Minor);
+                insert_practitionersEducation(personID, InstitutionName, YearInSchool, GraduationYear, DegreeEarned, Major, Minor);
                 clearEducationArea();
                 get_practitionersEducations();
             }
@@ -1057,7 +1085,7 @@ namespace LewandowskiProject
             clearEducationArea();
         }
 
-        private void insert_practitionersProfessionalHealthExperience(int PersonId,string ProfessionalHealthExperienceType,string InstituteName,string City,string State,string AreaOfExpertise,string PositionTitle,string Description,int CurrentJob)
+        private void insert_practitionersProfessionalHealthExperience(string PersonId, string ProfessionalHealthExperienceType, string InstituteName, string City, string State, string AreaOfExpertise, string PositionTitle, string Description, int CurrentJob)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -1110,7 +1138,7 @@ namespace LewandowskiProject
             string PositionTitle = PractitionerInternshipNameOrTitle.Text;
             string Description = PractitionerInternshipsTextArea.Text;
             int CurrentJob = PractitionerInternshipsCurrentRadioButtonList.SelectedIndex;
-            if((InstituteName != "") && (City != "") && (PositionTitle != "") && (Description != ""))
+            if ((InstituteName != "") && (City != "") && (PositionTitle != "") && (Description != ""))
             {
                 insert_practitionersProfessionalHealthExperience(personID, ProfessionalHealthExperienceType, InstituteName, City, State, AreaOfExpertise, PositionTitle, Description, CurrentJob);
                 clearPractitionersProfessionalHealthExperienceArea();
@@ -1130,7 +1158,7 @@ namespace LewandowskiProject
             clearPractitionersProfessionalHealthExperienceArea();
         }
 
-        private void insert_practitionersProfession(int PersonId,string ProfessionTitle,string Specialty,string NameOfCompany,string City,string State,string YearsInProfession,string AreaOfExpertise,int CurrentJob)
+        private void insert_practitionersProfession(string PersonId, string ProfessionTitle, string Specialty, string NameOfCompany, string City, string State, string YearsInProfession, string AreaOfExpertise, int CurrentJob)
         {
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
             {
@@ -1183,7 +1211,7 @@ namespace LewandowskiProject
             string YearsInProfession = PractitionerYearsInLabelText.Text;
             string AreaOfExpertise = PractitionerProfessionDropDownList.SelectedItem.ToString();
             int CurrentJob = PractitionerProfessionCurrentRadioButtonList.SelectedIndex;
-            if((ProfessionTitle != "") && (Specialty != "") && (NameOfCompany != "") && (City != "") && (YearsInProfession != ""))
+            if ((ProfessionTitle != "") && (Specialty != "") && (NameOfCompany != "") && (City != "") && (YearsInProfession != ""))
             {
                 insert_practitionersProfession(personID, ProfessionTitle, Specialty, NameOfCompany, City, State, YearsInProfession, AreaOfExpertise, CurrentJob);
                 clearPractitionersProfessionArea();
