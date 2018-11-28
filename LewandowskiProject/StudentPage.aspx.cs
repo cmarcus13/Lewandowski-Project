@@ -27,6 +27,7 @@ namespace LewandowskiProject
         private string majorStudent;
         private string minorStudent;
         private string yearInSchoolStudent;
+        private string email;
 
         //Page Load. When the page loads, if the current logged in user is a student then they will have access to this page
         protected void Page_Load(object sender, EventArgs e)
@@ -197,56 +198,22 @@ namespace LewandowskiProject
                     cmd.Parameters.AddWithValue("BioResearchInterst", bio);
                     cmd.Parameters["BioResearchInterst"].Direction = ParameterDirection.Output;
 
-                    cmd.Parameters.AddWithValue("YearInSchool", yearInSchoolStudent);
-                    cmd.Parameters["YearInSchool"].Direction = ParameterDirection.Output;
-
-                    cmd.Parameters.AddWithValue("GraduationYear", graduationYearStudent);
-                    cmd.Parameters["GraduationYear"].Direction = ParameterDirection.Output;
-
-                    cmd.Parameters.AddWithValue("Major", majorStudent);
-                    cmd.Parameters["Major"].Direction = ParameterDirection.Output;
-
-                    cmd.Parameters.AddWithValue("Minor", minorStudent);
-                    cmd.Parameters["Minor"].Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("Email1", email);
+                    cmd.Parameters["Email1"].Direction = ParameterDirection.Output;
 
                     cmd.ExecuteNonQuery();
 
                     //Assigning the global variables to the stored procedures output variables. 
                     firstNameStudent = cmd.Parameters["FirstName"].Value.ToString();
                     lastNameStudent = cmd.Parameters["LastName"].Value.ToString();
-                    yearInSchoolStudent = cmd.Parameters["YearInSchool"].Value.ToString();
-                    graduationYearStudent = cmd.Parameters["GraduationYear"].Value.ToString();
                     bio = cmd.Parameters["BioResearchInterst"].Value.ToString();
-                    majorStudent = cmd.Parameters["Major"].Value.ToString();
-                    minorStudent = cmd.Parameters["Minor"].Value.ToString();
+                    email = cmd.Parameters["Email1"].Value.ToString();
 
                     //Assigning the global variables to the text field values.
                     FNameTextBox.Text = firstNameStudent;
                     LNameTextBox.Text = lastNameStudent;
-
-                    //If else statements for determing the correct index to display the student's current year in school
-                    if (yearInSchoolStudent.Equals("freshman") || yearInSchoolStudent.Equals("Freshman") || yearInSchoolStudent.Equals("FRESHMAN") || yearInSchoolStudent.Equals("FR") || yearInSchoolStudent.Equals("Fr"))
-                    {
-                        YearDropDownList.SelectedIndex = 1;
-                    }
-                    else if (yearInSchoolStudent.Equals("sophomore") || yearInSchoolStudent.Equals("Sophomore") || yearInSchoolStudent.Equals("SOPHOMORE") || yearInSchoolStudent.Equals("SO") || yearInSchoolStudent.Equals("So"))
-                    {
-                        YearDropDownList.SelectedIndex = 2;
-                    }
-                    else if (yearInSchoolStudent.Equals("junior") || yearInSchoolStudent.Equals("Junior") || yearInSchoolStudent.Equals("JUNIOR") || yearInSchoolStudent.Equals("JR") || yearInSchoolStudent.Equals("Jr"))
-                    {
-                        YearDropDownList.SelectedIndex = 3;
-                    }
-                    else if (yearInSchoolStudent.Equals("senior") || yearInSchoolStudent.Equals("Senior") || yearInSchoolStudent.Equals("SENIOR") || yearInSchoolStudent.Equals("SR") || yearInSchoolStudent.Equals("Sr"))
-                    {
-                        YearDropDownList.SelectedIndex = 4;
-                    }
-
-                    //Display the retrieved information in the modal
-                    GraduationYearTextbox.Text = graduationYearStudent;
-                    MajorTextBox.Text = majorStudent;
-                    MinorTextBox.Text = minorStudent;
                     BioTextArea.Text = bio;
+                    EmailLabel.Text = EmailLabel.Text + email;
                 }
             }
         }

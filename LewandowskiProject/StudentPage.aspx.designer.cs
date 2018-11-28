@@ -58,15 +58,6 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label EmailLabel;
         
         /// <summary>
-        /// Email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Email;
-        
-        /// <summary>
         /// FNameLabel control.
         /// </summary>
         /// <remarks>
@@ -103,76 +94,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.TextBox LNameTextBox;
         
         /// <summary>
-        /// YearInSchoolLabel control.
+        /// BioLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label YearInSchoolLabel;
-        
-        /// <summary>
-        /// YearDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList YearDropDownList;
-        
-        /// <summary>
-        /// graduationLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label graduationLabel;
-        
-        /// <summary>
-        /// GraduationYearTextbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GraduationYearTextbox;
-        
-        /// <summary>
-        /// MajorLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MajorLabel;
-        
-        /// <summary>
-        /// MajorTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MajorTextBox;
-        
-        /// <summary>
-        /// MinorLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MinorLabel;
-        
-        /// <summary>
-        /// MinorTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MinorTextBox;
+        protected global::System.Web.UI.WebControls.Label BioLabel;
         
         /// <summary>
         /// BioTextArea control.

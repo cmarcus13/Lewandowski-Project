@@ -32,39 +32,19 @@
      <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="AjaxFunctionalityEater"
         PopupControlID="ModalPanel" BackgroundCssClass="Background" />
     <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" OnClick="ClientButton_Click" />
-    <asp:Panel ID="ModalPanel" runat="server" Width="500px" CssClass="ProfilePopup">
+    <asp:Panel ID="ModalPanel" runat="server" Height="350px" Width="500px" CssClass="ProfilePopup">
         <h3>Edit Profile</h3>
        
-        <asp:Label ID="EmailLabel" runat="server" Text="JCU Email:"></asp:Label>
-        &nbsp;<asp:Label ID="Email" runat="server" Text="default@jcu.edu"></asp:Label><br /><br />
-        
+        <asp:Label ID="EmailLabel" runat="server" Text="Email: "></asp:Label>
+        <br /><br />     
         <asp:Label ID="FNameLabel" runat="server" Text="First Name:"></asp:Label>
         &nbsp;<asp:TextBox ID="FNameTextBox" runat="server"></asp:TextBox><br /><br />
         
         <asp:Label ID="LNameLabel" runat="server" Text="Last Name:"></asp:Label>
         &nbsp;<asp:TextBox ID="LNameTextBox" runat="server"></asp:TextBox><br /><br />
 
-        <asp:Label ID="YearInSchoolLabel" runat="server" Text="Year In School:"></asp:Label>
-        &nbsp;<asp:DropDownList ID="YearDropDownList" runat="server">
-            <asp:ListItem>Select Year</asp:ListItem>
-            <asp:ListItem>Freshman</asp:ListItem>
-            <asp:ListItem>Sophomore</asp:ListItem>
-            <asp:ListItem>Junior</asp:ListItem>
-            <asp:ListItem>Senior</asp:ListItem>
-        </asp:DropDownList>
-        <br />
-        <br />
-        <asp:Label ID="graduationLabel" runat="server" Text="Graduation Year:"></asp:Label>
-        &nbsp;<asp:TextBox ID="GraduationYearTextbox" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="MajorLabel" runat="server" Text="Major(s):"></asp:Label>
-        &nbsp;<asp:TextBox ID="MajorTextBox" runat="server"></asp:TextBox><br /><br />
-
-        <asp:Label ID="MinorLabel" runat="server" Text="Minor(s):"></asp:Label>
-        &nbsp;<asp:TextBox ID="MinorTextBox" runat="server"></asp:TextBox><br /><br />
-
-        <asp:Textbox id="BioTextArea" runat="server" placeholder="Add Bio" cols="55" rows="5"></asp:Textbox>
+        <asp:Label ID="BioLabel" runat="server" Text="Bio: "></asp:Label>
+        <asp:Textbox id="BioTextArea" runat="server" placeholder="Add Bio" cols="55" rows="5" Height="93px" TextMode="MultiLine" Width="270px"></asp:Textbox>
         <br /><br />
         <asp:Button ID="CloseButton" runat="server" Text="Close" OnClick="CloseButton_Click" />
     </asp:Panel>
