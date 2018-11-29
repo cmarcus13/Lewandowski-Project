@@ -14,6 +14,7 @@
             <asp:RadioButtonList ID="userTypeRadioButtonList" runat="server">
                 <asp:ListItem Value="0">Student</asp:ListItem>
                 <asp:ListItem Value="1">Practitioner</asp:ListItem>
+                <asp:ListItem>Admin</asp:ListItem>
             </asp:RadioButtonList>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="userTypeRadioButtonList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The user type field is required." />
@@ -135,6 +136,8 @@
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
                     <asp:CompareValidator runat="server" ControlToCompare="passwordTextBox" ControlToValidate="confirmPasswordTextBox"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Passwords must be at least 6 characters. Passwords must have at least one non letter or digit character. Passwords must have at least one digit ('0'-'9'). Passwords must have at least one uppercase ('A'-'Z')."></asp:Label>
         </div>
         <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
     </div>

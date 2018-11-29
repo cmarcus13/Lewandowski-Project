@@ -416,21 +416,6 @@ namespace LewandowskiProject
                         PractitionerInternshipsDropDownList.SelectedIndex = 2;
                     }
 
-
-                    if (areaOfExpertise.Equals("Dentistry"))
-                    {
-                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 0;
-                    }
-                    else if (areaOfExpertise.Equals("Surgery"))
-                    {
-                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 1;
-                    }
-                    else if (areaOfExpertise.Equals("Other"))
-                    {
-                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 2;
-                    }
-
-
                     PractitionerInternshipsInstituteNameText.Text = instituteName;
                     PractitionerInternshipsInstituteCity.Text = city;
 

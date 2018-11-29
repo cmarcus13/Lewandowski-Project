@@ -247,22 +247,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label EmailLabel;
         
         /// <summary>
-        /// Label11 control.
+        /// passwordHiddenField control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
-        
-        /// <summary>
-        /// PasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PasswordLabel;
+        protected global::System.Web.UI.WebControls.HiddenField passwordHiddenField;
         
         /// <summary>
         /// acceptUser control.

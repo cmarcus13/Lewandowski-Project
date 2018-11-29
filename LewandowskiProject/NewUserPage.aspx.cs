@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Text.RegularExpressions;
 
 namespace LewandowskiProject
 {
@@ -35,10 +36,34 @@ namespace LewandowskiProject
             string Email = emailTextBox.Text;
             string userPassword = confirmPasswordTextBox.Text;
 
-            insert_newuser(UserType,FirstName,LastName,Suffix,Title,Bio,City,State,Gender,Email,userPassword);
-            clearForm();
-       
+            if(validatePassword(userPassword) == true)
+            {
+                insert_newuser(UserType, FirstName, LastName, Suffix, Title, Bio, City, State, Gender, Email, userPassword);
+                clearForm();
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Thank you for requesting access.')", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Check password requirements.')", true);
+            }
         }
+
+        private Boolean validatePassword(string password)
+        {
+            string regex = @"(?=.*\d)(?=.*[\W])(?=.*[A-Z])(?=.*[a-z]).{6,20}";
+            Boolean result = false;
+
+            if (Regex.IsMatch(password, regex))
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+
 
         private void insert_newuser(string UserType, string FirstName, string LastName, string Suffix, string Title, string Bio, string City, string State, string Gender, string Email, string userPassword)
         {

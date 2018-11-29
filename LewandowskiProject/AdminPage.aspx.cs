@@ -77,7 +77,7 @@ namespace LewandowskiProject
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
                 var user = new ApplicationUser() { UserName = EmailLabel.Text, Email = EmailLabel.Text };
-                IdentityResult result = manager.Create(user, PasswordLabel.Text);
+                IdentityResult result = manager.Create(user, passwordHiddenField.Value);
                 if (result.Succeeded)
                 {
                     int idnewuser = Convert.ToInt16(userIdHiddenField.Value);
@@ -113,7 +113,7 @@ namespace LewandowskiProject
             StateLabel.Text = "";
             GenderLabel.Text = "";
             EmailLabel.Text = "";
-            PasswordLabel.Text = "";
+            passwordHiddenField.Value = "";
         }
 
         protected void newUsersGridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -215,7 +215,7 @@ namespace LewandowskiProject
                     StateLabel.Text = State;
                     GenderLabel.Text = Gender;
                     EmailLabel.Text = Email;
-                    PasswordLabel.Text = userPassword;
+                    passwordHiddenField.Value = userPassword;
                 }
             }
         }

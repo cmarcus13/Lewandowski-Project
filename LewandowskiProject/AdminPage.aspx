@@ -88,8 +88,7 @@
         <asp:Label ID="Label10" runat="server" Text="Email: " Font-Bold="true"></asp:Label>
         <asp:Label ID="EmailLabel" runat="server" Text=""></asp:Label>
         <br /><br />
-        <asp:Label ID="Label11" runat="server" Text="Password: " Font-Bold="true"></asp:Label>
-        <asp:Label ID="PasswordLabel" runat="server" Text=""></asp:Label>
+        <asp:HiddenField ID="passwordHiddenField" runat="server" />
         <br /><br />
         <asp:Button ID="acceptUser" runat="server" Text="Accept" OnClick="acceptUser_Click" />
         <br />
