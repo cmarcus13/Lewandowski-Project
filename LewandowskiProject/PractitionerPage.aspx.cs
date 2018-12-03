@@ -20,9 +20,10 @@ namespace LewandowskiProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            personID = Session["PersonId"].ToString();
             if (!IsPostBack)
             {
-                personID = Session["PersonId"].ToString();
+                //personID = Session["PersonId"].ToString();
                 get_practitionerInfo();
                 get_practitionersEducations();
                 get_practitionersProfessionalHealthExperiences();
@@ -165,6 +166,7 @@ namespace LewandowskiProject
                         PractitionerAddEducationDropDownList.Visible = true;
                         PractitionerAddEducationDropDownList.Items.Clear();
                         PractitionerEducationAddButton.Visible = false;
+                        PractitionerEducationClearButton.Visible = true;
                         PractitionerEducationUpdateButton.Visible = true;
                         PractitionerEducationDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -181,6 +183,7 @@ namespace LewandowskiProject
                         PractitionerEducationUpdateButton.Visible = false;
                         PractitionerEducationDeleteButton.Visible = false;
                         PractitionerEducationAddButton.Visible = true;
+                        PractitionerEducationClearButton.Visible = false;
                     }
                 }
             }
@@ -306,6 +309,7 @@ namespace LewandowskiProject
                         PractitionerAddInternshipsDropDownList.Visible = true;
                         PractitionerAddInternshipsDropDownList.Items.Clear();
                         PractitionerInternshipsAddButton.Visible = false;
+                        PractitionerInternshipsClearButton.Visible = true;
                         PractitionerInternshipsUpdateButton.Visible = true;
                         PractitionerInternshipsDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -323,6 +327,7 @@ namespace LewandowskiProject
                         PractitionerInternshipsUpdateButton.Visible = false;
                         PractitionerInternshipsDeleteButton.Visible = false;
                         PractitionerInternshipsAddButton.Visible = true;
+                        PractitionerInternshipsClearButton.Visible = false;
                     }
                 }
             }
@@ -416,6 +421,21 @@ namespace LewandowskiProject
                         PractitionerInternshipsDropDownList.SelectedIndex = 2;
                     }
 
+
+                    if (areaOfExpertise.Equals("Dentistry"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 0;
+                    }
+                    else if (areaOfExpertise.Equals("Surgery"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 1;
+                    }
+                    else if (areaOfExpertise.Equals("Other"))
+                    {
+                        PractitionerInternshipsAreaDropDownList.SelectedIndex = 2;
+                    }
+
+
                     PractitionerInternshipsInstituteNameText.Text = instituteName;
                     PractitionerInternshipsInstituteCity.Text = city;
 
@@ -483,6 +503,7 @@ namespace LewandowskiProject
                         PractitionerAddPrfessionDropDownList.Visible = true;
                         PractitionerAddPrfessionDropDownList.Items.Clear();
                         PractitionerProfessionAddButton.Visible = false;
+                        PractitionerProfessionClearButton.Visible = true;
                         PractitionerProfessionUpdateButton.Visible = true;
                         PractitionerProfessionDeleteButton.Visible = true;
                         while (myReader.Read())
@@ -499,6 +520,7 @@ namespace LewandowskiProject
                         PractitionerAddPrfessionDropDownList.Visible = false;
                         PractitionerProfessionUpdateButton.Visible = false;
                         PractitionerProfessionDeleteButton.Visible = false;
+                        PractitionerProfessionClearButton.Visible = false;
                         PractitionerProfessionAddButton.Visible = true;
                     }
                 }
@@ -1065,6 +1087,7 @@ namespace LewandowskiProject
         protected void PractitionerEducationClearButton_Click(object sender, EventArgs e)
         {
             PractitionerEducationAddButton.Visible = true;
+            PractitionerEducationClearButton.Visible = false;
             PractitionerEducationUpdateButton.Visible = false;
             PractitionerEducationDeleteButton.Visible = false;
             clearEducationArea();
@@ -1140,6 +1163,7 @@ namespace LewandowskiProject
             PractitionerInternshipsAddButton.Visible = true;
             PractitionerInternshipsUpdateButton.Visible = false;
             PractitionerInternshipsDeleteButton.Visible = false;
+            PractitionerInternshipsClearButton.Visible = false;
             clearPractitionersProfessionalHealthExperienceArea();
         }
 
@@ -1213,6 +1237,7 @@ namespace LewandowskiProject
             PractitionerProfessionAddButton.Visible = true;
             PractitionerProfessionUpdateButton.Visible = false;
             PractitionerProfessionDeleteButton.Visible = false;
+            PractitionerProfessionClearButton.Visible = false;
             clearPractitionersProfessionArea();
         }
 

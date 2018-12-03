@@ -116,11 +116,6 @@ namespace LewandowskiProject
             passwordHiddenField.Value = "";
         }
 
-        protected void newUsersGridView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void CloseButton_Click(object sender, EventArgs e)
         {
             //update_studentInfo(firstNameStudent, lastNameStudent, yearInSchoolStudent, graduationYearStudent, bio, majorStudent, minorStudent);
@@ -296,12 +291,8 @@ namespace LewandowskiProject
                     cmd.Parameters["idnewuser"].Direction = ParameterDirection.Input;
 
                     cmd.ExecuteNonQuery();
-
                 }
             }
         }
-
-
-
     }
 }

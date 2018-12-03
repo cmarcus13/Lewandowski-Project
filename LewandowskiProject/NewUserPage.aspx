@@ -5,8 +5,9 @@
     </div>
 
     <div>
-        <h4>Please complete form. You will be notified by the Pre-Health Office if you are granted access.</h4>
+        <h4>Please complete this form. Once approved by the Pre-Health Office you will have access to the website.</h4>
     </div>
+
     <div id="wrapper">
         <div id="left">
             <h3>Personal Information: </h3>
@@ -19,25 +20,30 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="userTypeRadioButtonList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The user type field is required." />
             <br />
-            <asp:Label ID="firstNameLabel" runat="server" Text="First Name: "></asp:Label>
+            <br />
+            <asp:Label ID="firstNameLabel" runat="server" Text="First Name: "></asp:Label><br />
             <asp:TextBox ID="firstNameTextBox" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="firstNameTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The first name field is required." />
             <br />
-            <asp:Label ID="lastNameLabel" runat="server" Text="Last Name: "></asp:Label>
+            <br />
+            <asp:Label ID="lastNameLabel" runat="server" Text="Last Name: "></asp:Label><br />
             <asp:TextBox ID="lastNameTextBox" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="lastNameTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The last name field is required." />
             <br />
-            <asp:Label ID="suffixLabel" runat="server" Text="Suffix: "></asp:Label>
+            <br />
+            <asp:Label ID="suffixLabel" runat="server" Text="Suffix: "></asp:Label><br />
             <asp:TextBox ID="suffixTextBox" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="suffixTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The suffix field is required." />
             <br />
-            <asp:Label ID="titleLabel" runat="server" Text="Title: "></asp:Label>
+            <br />
+            <asp:Label ID="titleLabel" runat="server" Text="Title: "></asp:Label><br />
             <asp:TextBox ID="titleTextBox" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="titleTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The title field is required." />
+            <br />
             <br />
             <asp:Label ID="genderLabel" runat="server" Text="Gender:"></asp:Label>
             <asp:RadioButtonList ID="genderRadioButtonList" runat="server">
@@ -47,13 +53,14 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="genderRadioButtonList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The gender field is required." />
             <br />
-            <asp:Label ID="cityLabel" runat="server" Text="City: "></asp:Label>
+            <br />
+            <asp:Label ID="cityLabel" runat="server" Text="City: "></asp:Label><br />
             <asp:TextBox ID="cityTextBox" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="cityTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The city field is required." />
             <br />
-            <asp:Label ID="stateLabel" runat="server" Text="State:"></asp:Label>
             <br />
+            <asp:Label ID="stateLabel" runat="server" Text="State:"></asp:Label> <br />
             <asp:DropDownList ID="stateDropDownList" runat="server">
                 <asp:ListItem>Alabama</asp:ListItem>
                          <asp:ListItem>Alaska</asp:ListItem>
@@ -112,33 +119,37 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="stateDropDownList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The state field is required." />
             <br />
-            <asp:Label ID="bioLabel" runat="server" Text="Bio: "></asp:Label>
             <br />
+            <asp:Label ID="bioLabel" runat="server" Text="Bio: "></asp:Label> <br />
             <asp:TextBox ID="bioTextArea" TextMode="multiline" columns="40" Rows="5" placeholder="Add bio/interests..." runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="bioTextArea"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The state field is required." />
         </div>
+
         <div id="right">
             <h3>User Login Credentials: </h3>
-            <asp:Label ID="emailLabel" runat="server" Text="Email: "></asp:Label> 
+            <asp:Label ID="emailLabel" runat="server" Text="Email: "></asp:Label><br />
             <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
              <asp:RequiredFieldValidator runat="server" ControlToValidate="emailTextBox"
                         CssClass="text-danger" ErrorMessage="The email field is required." />
             <br />
-            <asp:Label ID="passwordLabel" runat="server" Text="Password: "></asp:Label>
+            <br />
+            <asp:Label ID="passwordLabel" runat="server" Text="Password: "></asp:Label><br />
             <asp:TextBox ID="passwordTextBox" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="passwordTextBox"
                        CssClass="text-danger" ErrorMessage="The password field is required." />
             <br />
-            <asp:Label ID="passwordConfirmLabel" runat="server" Text="Confirm Password: "></asp:Label>
+            <br />
+            <asp:Label ID="passwordConfirmLabel" runat="server" Text="Confirm Password: "></asp:Label><br />
             <asp:TextBox ID="confirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="confirmPasswordTextBox"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
                     <asp:CompareValidator runat="server" ControlToCompare="passwordTextBox" ControlToValidate="confirmPasswordTextBox"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Passwords must be at least 6 characters. Passwords must have at least one non letter or digit character. Passwords must have at least one digit ('0'-'9'). Passwords must have at least one uppercase ('A'-'Z')."></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="<i>Passwords must be at least 6 characters. Passwords must have at least one non letter or digit character. Passwords must have at least one digit ('0'-'9'). Passwords must have at least one uppercase ('A'-'Z').</i>"></asp:Label>
         </div>
+        <br />
         <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
     </div>
 </asp:Content>

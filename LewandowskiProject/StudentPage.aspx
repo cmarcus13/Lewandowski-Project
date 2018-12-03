@@ -21,6 +21,10 @@
         }
         .SizeOfText{
             font-size: 110%;
+            width: 170%;
+            padding-left: 1em;
+            padding-right: 1em;
+            text-align: center;
         }
     </style>
     
@@ -49,22 +53,25 @@
         <asp:Button ID="CloseButton" runat="server" Text="Close" OnClick="CloseButton_Click" />
     </asp:Panel>
 <br />
-    <div style="padding:10px" class="SizeOfText">
-        <h3>
-            Explore Professional Partners By First or Last Name  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="800px" runat="server" OnTextChanged="searchTextBox_TextChanged"></asp:TextBox>
-            <br /> <br />
-            Search by City  <asp:TextBox ID="cityTextBox" runat="server" width="500px" placeholder="Search City" OnTextChanged="cityTextBox_TextChanged"></asp:TextBox>
-            <br /> <br />
-            Search by Graduation Year  <asp:TextBox ID="yearTextBox" runat="server" width="241px" placeholder="Search Year" OnTextChanged="yearTextBox_TextChanged"></asp:TextBox>
-        </h3>
-        <h3>
-        <asp:Button ID="searchButton" runat="server" Text="Go" Height="28px" />
-        &nbsp;<asp:Button ID="resetButton" runat="server" Text="Reset List" OnClick="resetButton_Click" Height="29px" />
-            &nbsp;Reset List to start a new search.
-        </h3>
         <section style="display:flex; margin-top:5px">
         <div style="margin:5px,5px,5px,0; flex:1; background-color:#EAEAEA" class="SizeOfText">
-            <asp:Label ID="filter" runat="server" Text="filter" style="margin:5px">Filter</asp:Label>
+            <b>
+                <asp:Label ID="filter" runat="server" Text="Search for a Professional Partner" style="margin:5px" Font-Size="Larger"></asp:Label>
+            </b>
+            <br />
+            <br />
+        <asp:Button ID="searchButton" runat="server" Text="Go" Height="28px" />
+        &nbsp;<asp:Button ID="resetButton" runat="server" Text="Reset List" OnClick="resetButton_Click" Height="29px" />
+            &nbsp;Reset List to start a new search.<br />
+            <br />
+            Explore Professional Partners By First or Last Name  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="800px" runat="server" OnTextChanged="searchTextBox_TextChanged"></asp:TextBox>
+            <br />
+            <br />
+            Search by City  <asp:TextBox ID="cityTextBox" runat="server" width="500px" placeholder="Search City" OnTextChanged="cityTextBox_TextChanged"></asp:TextBox>
+            <br />
+            <br />
+            Search by Graduation Year  <asp:TextBox ID="yearTextBox" runat="server" width="241px" placeholder="Search Year" OnTextChanged="yearTextBox_TextChanged"></asp:TextBox>
+            <br />
             <br /> 
             <asp:DropDownList ID="stateDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="stateDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select State</asp:ListItem>
@@ -123,6 +130,7 @@
                      <asp:ListItem>Wyoming</asp:ListItem>
             </asp:DropDownList>
             <br />
+            <br />
             <asp:DropDownList ID="professionDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="professionDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select Profession</asp:ListItem>
                 <asp:ListItem>Dentist</asp:ListItem>
@@ -134,9 +142,9 @@
             </asp:DropDownList>
         </div>
         <br />
-        <div style="padding:5px; flex:3" class="SizeOfText">
+            <div style="padding-left:5px; flex:3; position:relative">
 
-            <asp:GridView ID="PractitionerGridView" runat="server" Width="900px" Height="70px" 
+             <asp:GridView ID="PractitionerGridView" runat="server" Width="900px" Height="70px" 
                 HorizontalAlign="Center" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="10" CellSpacing="3">
                 <Columns>
                     <asp:TemplateField >
@@ -146,7 +154,7 @@
                   </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+                <HeaderStyle BackColor="#0A4068" Font-Bold="True" ForeColor="#E9B820" />
                 <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
                 <RowStyle BackColor="White" ForeColor="#330099" Width="1000px" HorizontalAlign="Center" />
                 <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
@@ -252,6 +260,5 @@
                 </asp:Panel>
             </div>
         </section>
-    </div>
     <br />
 </asp:Content>

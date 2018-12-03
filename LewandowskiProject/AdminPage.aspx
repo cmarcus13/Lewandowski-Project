@@ -33,7 +33,7 @@
     <h4>Please review the pending users below.</h4>
      <br /> <br />
      <asp:GridView ID="NewUsersGridView" runat="server" Width="900px" Height="70px" 
-                    HorizontalAlign="Center" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="10" CellSpacing="3" OnSelectedIndexChanged="newUsersGridView_SelectedIndexChanged">
+                    HorizontalAlign="Center" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="10" CellSpacing="3">
                     <Columns>
                         <asp:TemplateField >
                             <ItemTemplate>
