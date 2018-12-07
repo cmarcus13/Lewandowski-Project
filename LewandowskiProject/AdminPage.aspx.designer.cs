@@ -13,15 +13,6 @@ namespace LewandowskiProject {
     public partial class AdminPage {
         
         /// <summary>
-        /// mpe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ModalPopupExtender mpe;
-        
-        /// <summary>
         /// NewUsersGridView control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.HiddenField userIdHiddenField;
         
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
         /// UserTypeLabel control.
         /// </summary>
         /// <remarks>
@@ -85,13 +67,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label UserTypeLabel;
         
         /// <summary>
-        /// Label2 control.
+        /// UserTypeInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label UserTypeInputLabel;
         
         /// <summary>
         /// FirstNameLabel control.
@@ -103,13 +85,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label FirstNameLabel;
         
         /// <summary>
-        /// Label3 control.
+        /// FirstNameInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label FirstNameInputLabel;
         
         /// <summary>
         /// LastNameLabel control.
@@ -121,13 +103,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label LastNameLabel;
         
         /// <summary>
-        /// Label4 control.
+        /// LastNameInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label LastNameInputLabel;
         
         /// <summary>
         /// SuffixLabel control.
@@ -139,13 +121,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label SuffixLabel;
         
         /// <summary>
-        /// Label5 control.
+        /// SuffixInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label SuffixInputLabel;
         
         /// <summary>
         /// TitleLabel control.
@@ -157,13 +139,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label TitleLabel;
         
         /// <summary>
-        /// Label6 control.
+        /// TitleInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label TitleInputLabel;
         
         /// <summary>
         /// BioLabel control.
@@ -175,13 +157,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label BioLabel;
         
         /// <summary>
-        /// Label7 control.
+        /// BioInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label BioInputLabel;
         
         /// <summary>
         /// CityLabel control.
@@ -193,13 +175,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label CityLabel;
         
         /// <summary>
-        /// Label8 control.
+        /// CityInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label CityInputLabel;
         
         /// <summary>
         /// StateLabel control.
@@ -211,13 +193,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label StateLabel;
         
         /// <summary>
-        /// Label9 control.
+        /// StateInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label StateInputLabel;
         
         /// <summary>
         /// GenderLabel control.
@@ -229,13 +211,13 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label GenderLabel;
         
         /// <summary>
-        /// Label10 control.
+        /// GenderInputLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label GenderInputLabel;
         
         /// <summary>
         /// EmailLabel control.
@@ -245,6 +227,15 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label EmailLabel;
+        
+        /// <summary>
+        /// EmailInputLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmailInputLabel;
         
         /// <summary>
         /// passwordHiddenField control.

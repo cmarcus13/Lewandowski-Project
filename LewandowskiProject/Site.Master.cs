@@ -14,7 +14,7 @@ namespace LewandowskiProject
 {
     public partial class SiteMaster : MasterPage
     {
-
+        //Connection String for the MySQL Database
         private string dbConnectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
         
 
@@ -75,14 +75,17 @@ namespace LewandowskiProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+                //Session variable to hold the Person ID
                 Session["PersonID"] = Context.User.Identity.GetUserId();
-
+                //Initially making all the pages invisible
                 StudentPage.Visible = false;
                 PractitionerPage.Visible = false;
                 AdminPage.Visible = false;
 
+                //Testing to see if a user is logged in by using Identity's feature of getting the user id. If it is blank, the user is not logged in
                 if (Context.User.Identity.GetUserId() != "")
                 {
+                    //Getting the user type by calling the get_userType method
                     string userType = get_userType(Context.User.Identity.GetUserId());
                     if (userType == "Admin")
                     {
@@ -99,8 +102,10 @@ namespace LewandowskiProject
                 }
         }
 
+        //Method to get the user type for a particular user
         private string get_userType(string PersonId)
         {
+            //Local variable
             string UserType = "";
 
             using (MySqlConnection con = new MySqlConnection(dbConnectionString))
@@ -111,17 +116,23 @@ namespace LewandowskiProject
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+                    //input variable
+
                     cmd.Parameters.AddWithValue("PersonId", PersonId);
                     cmd.Parameters["PersonId"].Direction = System.Data.ParameterDirection.Input;
+
+                    //output variable
 
                     cmd.Parameters.AddWithValue("UserType", UserType);
                     cmd.Parameters["UserType"].Direction = System.Data.ParameterDirection.Output;
 
                     cmd.ExecuteScalar();
-
+                    
+                    //setting the local variable to the result of the query
                     UserType = cmd.Parameters["UserType"].Value.ToString();
                 }
             }
+            //Return the UserType
             return UserType;
         }
 

@@ -13,6 +13,15 @@ namespace LewandowskiProject {
     public partial class StudentPage {
         
         /// <summary>
+        /// ClientButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ClientButton;
+        
+        /// <summary>
         /// AjaxFunctionalityEater control.
         /// </summary>
         /// <remarks>
@@ -29,15 +38,6 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.ModalPopupExtender mpe;
-        
-        /// <summary>
-        /// ClientButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ClientButton;
         
         /// <summary>
         /// ModalPanel control.
@@ -130,24 +130,6 @@ namespace LewandowskiProject {
         protected global::System.Web.UI.WebControls.Label filter;
         
         /// <summary>
-        /// searchButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchButton;
-        
-        /// <summary>
-        /// resetButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button resetButton;
-        
-        /// <summary>
         /// searchTextBox control.
         /// </summary>
         /// <remarks>
@@ -191,6 +173,24 @@ namespace LewandowskiProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList professionDropDown;
+        
+        /// <summary>
+        /// searchButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button searchButton;
+        
+        /// <summary>
+        /// resetButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button resetButton;
         
         /// <summary>
         /// PractitionerGridView control.

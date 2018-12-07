@@ -132,10 +132,11 @@
                 <asp:Label ID="PractitionerEducationMinorTextLabel" runat="server">Minor: <br /></asp:Label>
                 <asp:TextBox ID="PractitionerEducationMinorText" runat="server"></asp:TextBox>
             </p>
-        <asp:Button ID="PractitionerEducationAddButton" runat="server" Text="add" OnClick="PractitionerEducationAddButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerEducationUpdateButton" runat="server" Text="update" OnClick="PractitionerEducationUpdateButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerEducationDeleteButton" runat="server" Text="delete" OnClick="PractitionerEducationDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerEducationAddButton" runat="server" Text="add" OnClick="PractitionerEducationAddButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerEducationUpdateButton" runat="server" Text="update" OnClick="PractitionerEducationUpdateButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerEducationDeleteButton" runat="server" Text="delete" OnClick="PractitionerEducationDeleteButton_Click" /> &nbsp
         <asp:Button ID="PractitionerEducationClearButton" runat="server" Text="add another record" OnClick="PractitionerEducationClearButton_Click"/> <br />
+
 
      <h2>Internships/Residencies/Fellowships:</h2>
             <p>
@@ -240,9 +241,9 @@
                     <asp:ListItem>No</asp:ListItem>
                 </asp:RadioButtonList>
             </p>
-        <asp:Button ID="PractitionerInternshipsAddButton" runat="server" Text="add" OnClick="PractitionerInternshipsAddButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerInternshipsUpdateButton" runat="server" Text="update" OnClick="PractitionerInternshipsUpdateButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerInternshipsDeleteButton" runat="server" Text="delete" OnClick="PractitionerInternshipsDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerInternshipsAddButton" runat="server" Text="add" OnClick="PractitionerInternshipsAddButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerInternshipsUpdateButton" runat="server" Text="update" OnClick="PractitionerInternshipsUpdateButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerInternshipsDeleteButton" runat="server" Text="delete" OnClick="PractitionerInternshipsDeleteButton_Click" /> &nbsp
         <asp:Button ID="PractitionerInternshipsClearButton" runat="server" Text="add another record" OnClick="PractitionerInternshipsClearButton_Click" /> <br />
     
 
@@ -343,9 +344,9 @@
                 <asp:Label ID="PractitionerYearsInLabel" runat="server">Years In Profession:<br /></asp:Label>
                 <asp:TextBox ID="PractitionerYearsInLabelText" runat="server"></asp:TextBox>        
             </p>
-        <asp:Button ID="PractitionerProfessionAddButton" runat="server" Text="add" OnClick="PractitionerProfessionAddButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerProfessionUpdateButton" runat="server" Text="update" OnClick="PractitionerProfessionUpdateButton_Click" /> &nbsp &nbsp
-        <asp:Button ID="PractitionerProfessionDeleteButton" runat="server" Text="delete" OnClick="PractitionerProfessionDeleteButton_Click" /> <br />
+        <asp:Button ID="PractitionerProfessionAddButton" runat="server" Text="add" OnClick="PractitionerProfessionAddButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerProfessionUpdateButton" runat="server" Text="update" OnClick="PractitionerProfessionUpdateButton_Click" /> &nbsp
+        <asp:Button ID="PractitionerProfessionDeleteButton" runat="server" Text="delete" OnClick="PractitionerProfessionDeleteButton_Click" /> &nbsp
         <asp:Button ID="PractitionerProfessionClearButton" runat="server" Text="add another record" OnClick="PractitionerProfessionClearButton_Click" /> <br />
     
 

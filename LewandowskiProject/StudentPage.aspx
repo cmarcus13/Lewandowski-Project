@@ -32,11 +32,14 @@
         <h2>Student Profile</h2>
     </div>
 
+    <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" OnClick="ClientButton_Click" />
+    
+    <br />
+
     <asp:HiddenField ID="AjaxFunctionalityEater" runat="server" />
      <cc1:ModalPopupExtender ID="mpe" runat="server" TargetControlId="AjaxFunctionalityEater"
         PopupControlID="ModalPanel" BackgroundCssClass="Background" />
-    <asp:Button ID="ClientButton" runat="server" Text="Edit Profile" OnClick="ClientButton_Click" />
-    <asp:Panel ID="ModalPanel" runat="server" Height="350px" Width="500px" CssClass="ProfilePopup">
+    <asp:Panel ID="ModalPanel" runat="server" Height="375px" Width="500px" CssClass="ProfilePopup">
         <h3>Edit Profile</h3>
        
         <asp:Label ID="EmailLabel" runat="server" Text="Email: "></asp:Label>
@@ -54,25 +57,21 @@
     </asp:Panel>
 <br />
         <section style="display:flex; margin-top:5px">
-        <div style="margin:5px,5px,5px,0; flex:1; background-color:#EAEAEA" class="SizeOfText">
+                <div style="margin:5px,5px,5px,0; flex:1; background-color:#EAEAEA" class="SizeOfText">
             <b>
-                <asp:Label ID="filter" runat="server" Text="Search for a Professional Partner" style="margin:5px" Font-Size="Larger"></asp:Label>
+                <asp:Label ID="filter" runat="server" Text="Search for a Professional Partner" style="margin:5px; width:300px;" Font-Size="Larger"></asp:Label>
             </b>
             <br />
             <br />
-        <asp:Button ID="searchButton" runat="server" Text="Go" Height="28px" />
-        &nbsp;<asp:Button ID="resetButton" runat="server" Text="Reset List" OnClick="resetButton_Click" Height="29px" />
-            &nbsp;Reset List to start a new search.<br />
-            <br />
-            Explore Professional Partners By First or Last Name  <asp:TextBox ID="searchTextBox" placeholder="Search Alumni" width="800px" runat="server" OnTextChanged="searchTextBox_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="searchTextBox" placeholder="Search By First or Last Name" width="800px" runat="server" OnTextChanged="searchTextBox_TextChanged"></asp:TextBox>
             <br />
             <br />
-            Search by City  <asp:TextBox ID="cityTextBox" runat="server" width="500px" placeholder="Search City" OnTextChanged="cityTextBox_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="cityTextBox" runat="server" width="500px" placeholder="Search By City" OnTextChanged="cityTextBox_TextChanged"></asp:TextBox>
             <br />
             <br />
-            Search by Graduation Year  <asp:TextBox ID="yearTextBox" runat="server" width="241px" placeholder="Search Year" OnTextChanged="yearTextBox_TextChanged"></asp:TextBox>
-            <br />
+            <asp:TextBox ID="yearTextBox" runat="server" width="300px" placeholder="Search By Year" OnTextChanged="yearTextBox_TextChanged"></asp:TextBox>
             <br /> 
+            <br />
             <asp:DropDownList ID="stateDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="stateDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select State</asp:ListItem>
                <asp:ListItem>Alabama</asp:ListItem>
@@ -130,7 +129,6 @@
                      <asp:ListItem>Wyoming</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <br />
             <asp:DropDownList ID="professionDropDown" runat="server" style="margin:5px" OnSelectedIndexChanged="professionDropDown_SelectedIndexChanged">
                 <asp:ListItem>Select Profession</asp:ListItem>
                 <asp:ListItem>Dentist</asp:ListItem>
@@ -140,6 +138,12 @@
                 <asp:ListItem>Cardiologist</asp:ListItem>
                 <asp:ListItem>Pediatrician</asp:ListItem>
             </asp:DropDownList>
+            <br />
+            <br />
+            <asp:Button ID="searchButton" runat="server" Text="Search" Height="28px" />
+        &nbsp;<asp:Button ID="resetButton" runat="server" Text="Reset Search" OnClick="resetButton_Click" Height="29px" />  
+            <br />
+            <br />
         </div>
         <br />
             <div style="padding-left:5px; flex:3; position:relative">

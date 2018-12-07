@@ -20,7 +20,6 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="userTypeRadioButtonList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The user type field is required." />
             <br />
-            <br />
             <asp:Label ID="firstNameLabel" runat="server" Text="First Name: "></asp:Label><br />
             <asp:TextBox ID="firstNameTextBox" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="firstNameTextBox"
@@ -44,7 +43,6 @@
             <asp:RequiredFieldValidator runat="server" ControlToValidate="titleTextBox"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The title field is required." />
             <br />
-            <br />
             <asp:Label ID="genderLabel" runat="server" Text="Gender:"></asp:Label>
             <asp:RadioButtonList ID="genderRadioButtonList" runat="server">
                 <asp:ListItem>Male</asp:ListItem>
@@ -52,7 +50,6 @@
             </asp:RadioButtonList>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="genderRadioButtonList"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The gender field is required." />
-            <br />
             <br />
             <asp:Label ID="cityLabel" runat="server" Text="City: "></asp:Label><br />
             <asp:TextBox ID="cityTextBox" runat="server"></asp:TextBox>
